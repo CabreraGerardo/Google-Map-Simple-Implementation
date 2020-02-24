@@ -1,0 +1,11 @@
+body{
+    background-color: #efefef;
+    font-family: 'Raleway', serif;
+}
+
+#boton{
+    background-color: rgb(116, 6, 6);
+    color: white;
+    font-size: 30px;
+    width: 70%;
+}
