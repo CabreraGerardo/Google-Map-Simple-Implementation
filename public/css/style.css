@@ -1,3 +1,4 @@
+
 body{
     background-color: #efefef;
     font-family: 'Raleway', serif;
@@ -8,4 +9,10 @@ body{
     color: white;
     font-size: 30px;
     width: 70%;
+}
+
+.link-title{
+    font-size: x-large;
+    color: rgb(51, 51, 143);
+    font-weight: bold;
 }
