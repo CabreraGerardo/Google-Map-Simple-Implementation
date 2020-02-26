@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mapa Estático</title>
-    
+    <title>Práctica 5</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="../public/css/style.css"></link>
-    <link rel="stylesheet" href="css/practica4.css"></link>
+    <link rel="stylesheet" href="css/practica5.css">
 </head>
 <body>
+    
     <nav class="navbar navbar-dark bg-dark sticky-top">
         <a class="navbar-brand" href="../index.html">
             <img class="img-fluid mx-sm-3" style="max-width: 40px;" src="https://freeiconshop.com/wp-content/uploads/edd/location-map-flat.png" alt="">
@@ -22,41 +21,15 @@
     <div class="container-fluid">
         <div class="container bg-white rounded shadow-lg my-5">
             <div class="row mx-2 mt-3">
-                <div class="col-12 p-5">
+                <div class="col-12 px-5 pt-5">
                     <h1 class="text-center">
-                        Mapa Estático
+                        Info Window
                     </h1>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 text-center">
-                    <p>Haz clic para obtener las coordenadas de tu dispositivo</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <button class="btn mb-2 btn-red" type="button" onclick="obtieneUbicacion()">Obtener Coordenadas</button>
-                </div>
-            </div>
-
-            <div class="row mt-5 mx-md-5 px-md-5">
-                <div class="col-12">
-                    <label for="txtPlace">Ubicación a encontrar</label>
-                    <input type="text" class="form-control" id="txtPlace" placeholder="Escriba una ubicación">
-                </div>
-                <div class="col-12 text-center">
-                    <button class="btn mb-2 btn-secondary mt-3" type="button" onclick="buscar()">Obtener Imágen</button>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p id="mensaje"></p>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-12 text-center p-4">
-                    <div class="rounded" id="mapa"></div>
+                    <div class="rounded" id="map"></div>
                 </div>
             </div>
         </div>
@@ -66,7 +39,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c7b62fdfb0.js" crossorigin="anonymous"></script>
-    
-    <script src="js/practica4.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADjOfdGIg-7JiqjoTstMN9el4g-nLhxxA&callback=initMap" async defer></script>
+    <script src="js/practica5.js"></script>
+
 </body>
 </html>
