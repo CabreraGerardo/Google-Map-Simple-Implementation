@@ -4,11 +4,18 @@ body{
     font-family: 'Raleway', serif;
 }
 
-#boton{
+.btn-red{
     background-color: rgb(116, 6, 6);
     color: white;
-    font-size: 30px;
-    width: 70%;
+    font-size: 20px;
+    width: 60%;
+}
+
+.btn-red:hover{
+    background-color: rgb(80, 12, 12);
+    color: lightgray;
+    font-size: 20px;
+    width: 60%;
 }
 
 .link-title{
