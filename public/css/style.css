@@ -22,4 +22,19 @@ body{
     font-size: x-large;
     color: rgb(51, 51, 143);
     font-weight: bold;
+    margin-bottom: 0;
+}
+
+.link-body{
+    font-size: medium;
+    color: rgb(44, 44, 44);
+    font-weight: normal;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+li:hover{
+    background-color: #ececec;
 }
