@@ -27,7 +27,9 @@ function initMap(){
 
     if(navigator.geolocation)
     {
-        moverPosicion(marker);
+        setInterval(function(){
+            moverPosicion(marker);
+        }, 3000);
     }
 }
 
@@ -40,5 +42,6 @@ function moverPosicion(marker){
 
         marker.setPosition(new google.maps.LatLng(pos.lat, pos.lng));
         map.panTo(new google.maps.LatLng(pos.lat, pos.lng));
+        map.setCenter(pos);
     });
 }
