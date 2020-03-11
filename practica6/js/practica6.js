@@ -9,11 +9,12 @@ var propiedades = {
 }
 
 function initMap(){
+    
     map = new google.maps.Map(document.getElementById("map"), propiedades);
 
     var icono = {
         url: "https://d1s6fstvea5cci.cloudfront.net/content/themes/vtnz/resources/assets/images/pulse_dot.gif",
-        scaledSize: new google.maps.Size(50, 50),
+        scaledSize: new google.maps.Size(25, 25),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(0, 0)
     }
@@ -21,7 +22,7 @@ function initMap(){
     var marker = new google.maps.Marker({
         position: { lat: 0, lng: 0},
         icon: icono,
-        scaledSize: new google.maps.Size(50, 50),
+        scaledSize: new google.maps.Size(25, 25),
         map: map
     });
 
