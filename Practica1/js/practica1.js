@@ -6,7 +6,7 @@ function initMap()
     }
 
     var map = new google.maps.Map(
-        document.getElementById('mapa'),
+        document.getElementById('map'),
         {
             center: coordenadas,
             zoom: 15

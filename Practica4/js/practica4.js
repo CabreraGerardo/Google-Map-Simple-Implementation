@@ -20,8 +20,8 @@ function muestraPosicion(posicion) {
     coordenadas + 
     "&zoom=17&size=400x350&sensor=false&key=AIzaSyADjOfdGIg-7JiqjoTstMN9el4g-nLhxxA";
 
-    $("#mapa").empty();
-    $("#mapa").append("<img src='" + img + "'>");
+    $("#map").empty();
+    $("#map").append("<img src='" + img + "'>");
 }
 
 function buscar(){
@@ -30,7 +30,7 @@ function buscar(){
     $("#txtPlace").val() + 
     "&zoom=17&size=400x350&sensor=false&key=AIzaSyADjOfdGIg-7JiqjoTstMN9el4g-nLhxxA";
 
-    $("#mapa").empty();
-    $("#mapa").append("<img src='" + img + "'>");    
+    $("#map").empty();
+    $("#map").append("<img src='" + img + "'>");    
 }
 
