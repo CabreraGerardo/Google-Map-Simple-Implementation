@@ -12,14 +12,28 @@ body{
 .btn-red{
     background-color: rgb(116, 6, 6);
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     width: 60%;
 }
 
 .btn-red:hover{
     background-color: rgb(80, 12, 12);
     color: lightgray;
-    font-size: 20px;
+    font-size: 18px;
+    width: 60%;
+}
+
+.btn-dark-green{
+    background-color: rgb(48, 136, 48);
+    color: white;
+    font-size: 18px;
+    width: 60%;
+}
+
+.btn-dark-green:hover{
+    background-color: rgb(42, 112, 42);
+    color: lightgray;
+    font-size: 18px;
     width: 60%;
 }
 
