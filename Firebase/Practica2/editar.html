@@ -6,13 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
 
     <nav class="navbar navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="../index.html">
-            <img class="img-fluid mx-sm-3" style="max-width: 40px;" src="https://freeiconshop.com/wp-content/uploads/edd/location-map-flat.png" alt="">
+        <a class="navbar-brand" href="../../index.html">
+            <img class="img-fluid mx-sm-3" style="max-width: 40px;" src="https://freepngimg.com/thumb/map/64260-map-pin-vector-world-push-logo-drawing.png" alt="">
             Sistemas Georeferenciados
         </a>
     </nav>
@@ -42,19 +42,56 @@
                         <input class="form-control" type="text" name="usuario" placeholder="Usuario">
                     </div>
                     <div class="col-12 col-md-3 my-2 text-center d-flex align-items-end">
-                        <button class="btn btn-dark-green" type="submit">Agregar</button>
+                        <button class="btn btn-dark-green" type="submit" style="width: 100%;"><i class="fas fa-plus"></i></button>
                     </div>
                 </div>
             </form>
 
             <div class="row p-5">
                 <div class="col-12">
-                    <ul id="lista" class="list-group">
+                    <div id="lista" class="list-group">
 
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="editUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar Usuario</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="formaEditar">
+                            <div class="row p-4">
+                                <div class="col-12 col-md-6 my-2">
+                                    <label for="exampleInputEmail1">Nombre:</label>
+                                    <input class="form-control" type="text" name="nombre" placeholder="Nombre">
+                                </div>
+                                <div class="col-12 col-md-6 my-2">
+                                    <label for="exampleInputEmail1">Apellido:</label>
+                                    <input class="form-control" type="text" name="apellido" placeholder="Apellido">
+                                </div>
+                                <div class="col-12 my-2">
+                                    <label for="exampleInputEmail1">Usuario:</label>
+                                    <input class="form-control" type="text" name="usuario" placeholder="Usuario">
+                                </div>
+                                <input type="hidden" name="idEditar" id="idEditar">
+                            </div>
+                            <hr>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -65,6 +102,12 @@
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-firestore.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/firebase_config.js"></script>
+    <script src="js/constantes.js"></script>
+    <script src="js/model/usuario.js"></script>
+    <script src="js/renderUsers.js"></script>
+    <script src="js/agregar.js"></script>
+    <script src="js/actualizar.js"></script>
+    <script src="js/getData.js"></script>
 </body>
 </html>

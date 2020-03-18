@@ -1,8 +1,25 @@
 
+/*@media (prefers-color-scheme: light) {
+    :root{
+        --background-color: #efefef;
+        --container-background: fff;
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root{
+        --background-color: #4d4d4d;
+        --container-background: rgb(175, 174, 174);
+    }
+}*/
+
 body{
     background-color: #efefef;
     font-family: 'Raleway', serif;
 }
+
+/*.container{
+    background-color: var(--container-background);
+}*/
 
 #map {
     width: 100%;
