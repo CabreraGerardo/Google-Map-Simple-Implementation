@@ -6,7 +6,7 @@ fetch('datos.json')
         datos.forEach((registro) => {
             console.log(registro);
             let nombre = document.createElement("p");
-            nombre.textContent = "País: " + registro.country + ", casos: " + registros.cases;
+            nombre.textContent = "País: " + registro.country + ", casos: " + registro.cases;
             paises.appendChild(nombre);
         });
     });
