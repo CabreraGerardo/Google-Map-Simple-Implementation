@@ -1,3 +1,5 @@
+var paises = document.getElementById("paises");
+
 fetch('datos.json')
 .then((response) => {
     response.json().then((datos) => {
