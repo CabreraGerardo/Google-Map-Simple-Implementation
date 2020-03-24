@@ -35,14 +35,11 @@ function initMap(){
 
     const markers = obtenerMarcadores();
 
-    console.log(markers);
-
-    for(marcador of markers){
+    for(marcador in markers){
         let marker = new google.maps.Marker({
             map: map,
             position: new google.maps.LatLng(marcador.latitude, marcador.longitude),
             title: marcador.name
         });
     }
-
 };
