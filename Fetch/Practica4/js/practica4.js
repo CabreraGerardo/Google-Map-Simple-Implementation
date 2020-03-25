@@ -27,15 +27,15 @@ function obtenerMarcadores(map){
             datos.forEach((marcador) => {
                 console.log(marcador);
                 
-                var infoContent = "<strong>" + marcador.country + "</strong>"
-                                  +"<strong>Casos: </strong>" + marcador.cases + "<br>"
-                                  +"<strong>Nuevos hoy:</strong> " + marcador.todayCases + "<br>"
-                                  +"<strong>Muertes:</strong> " + marcador.deaths + "<br>"
-                                  +"<strong>Muertes Hoy:</strong> " + marcador.todayDeaths + "<br>"
-                                  +"<strong>Recuperados:</strong> " + marcador.recovered + "<br>"
-                                  +"<strong>Activos:</strong> " + marcador.active + "<br>"
-                                  +"<strong>Críticos:</strong> " + marcador.critical + "<br>"
-                                  +"<strong>Casos por millón:</strong> " + marcador.casesPerOneMillion;
+                var infoContent = "<h4>" + marcador.country + "</h4>"
+                                  +"<h5>Casos: </h5>" + marcador.cases + "<br>"
+                                  +"<h5>Nuevos hoy:</h5> " + marcador.todayCases + "<br>"
+                                  +"<h5>Muertes:</h5> " + marcador.deaths + "<br>"
+                                  +"<h5>Muertes Hoy:</h5> " + marcador.todayDeaths + "<br>"
+                                  +"<h5>Recuperados:</h5> " + marcador.recovered + "<br>"
+                                  +"<h5>Activos:</h5> " + marcador.active + "<br>"
+                                  +"<h5>Críticos:</h5> " + marcador.critical + "<br>"
+                                  +"<h5>Casos por millón:</h5> " + marcador.casesPerOneMillion;
 
                 var info = new google.maps.InfoWindow({
                     content: infoContent
