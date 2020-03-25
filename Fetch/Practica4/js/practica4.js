@@ -27,7 +27,7 @@ function obtenerMarcadores(map){
             datos.forEach((marcador) => {
                 console.log(marcador);
                 
-                var infoContent = "<h5>" + marcador.country + "</h5>"
+                var infoContent = "<strong>" + marcador.country + "</strong>"
                                   +"<strong>Casos: </strong>" + marcador.cases + "<br>"
                                   +"<strong>Nuevos hoy:</strong> " + marcador.todayCases + "<br>"
                                   +"<strong>Muertes:</strong> " + marcador.deaths + "<br>"
