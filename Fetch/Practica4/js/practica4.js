@@ -17,6 +17,10 @@ function obtenerMarcadores(map){
         anchor: new google.maps.Point(0, 0)
     }
 
+    var fetchConf = { method: 'GET',
+               mode: 'no-cors',
+               cache: 'default' };
+
     fetch('https://corona.lmao.ninja/countries')
     .then((response) => {
         response.json().then((datos) => {
