@@ -28,14 +28,14 @@ function obtenerMarcadores(map){
                 console.log(marcador);
                 
                 var infoContent = "<h5>" + marcador.country + "</h5>"
-                                  "<b>Casos: </b>" + marcador.cases + "<br>"
-                                  "<b>Nuevos hoy:</b> " + marcador.todayCases + "<br>"
-                                  "<b>Muertes:</b> " + marcador.deaths + "<br>"
-                                  "<b>Muertes Hoy:</b> " + marcador.todayDeaths + "<br>"
-                                  "<b>Recuperados:</b> " + marcador.recovered + "<br>"
-                                  "<b>Activos:</b> " + marcador.active + "<br>"
-                                  "<b>Críticos:</b> " + marcador.critical + "<br>"
-                                  "<b>Casos por millón:</b> " + marcador.casesPerOneMillion;
+                                  +"<b>Casos: </b>" + marcador.cases + "<br>"
+                                  +"<b>Nuevos hoy:</b> " + marcador.todayCases + "<br>"
+                                  +"<b>Muertes:</b> " + marcador.deaths + "<br>"
+                                  +"<b>Muertes Hoy:</b> " + marcador.todayDeaths + "<br>"
+                                  +"<b>Recuperados:</b> " + marcador.recovered + "<br>"
+                                  +"<b>Activos:</b> " + marcador.active + "<br>"
+                                  +"<b>Críticos:</b> " + marcador.critical + "<br>"
+                                  +"<b>Casos por millón:</b> " + marcador.casesPerOneMillion;
 
                 var info = new google.maps.InfoWindow({
                     content: infoContent
