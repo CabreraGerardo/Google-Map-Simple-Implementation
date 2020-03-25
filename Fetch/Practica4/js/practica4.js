@@ -8,7 +8,7 @@ var propiedades ={
     zoom: 2
 }
 
-function obtenerMarcadores(){
+function obtenerMarcadores(map){
     
     fetch('https://corona.lmao.ninja/countries')
     .then((response) => {
@@ -33,5 +33,5 @@ function obtenerMarcadores(){
 function initMap(){
     const map = new google.maps.Map(document.getElementById("map"), propiedades);
 
-    const markers = obtenerMarcadores();
+    const markers = obtenerMarcadores(map);
 };
