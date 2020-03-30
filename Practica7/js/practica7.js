@@ -67,7 +67,7 @@ function initMap() {
 
     // SET MAP TYPES
     document.getElementById("btnRoad").addEventListener("click", function(){
-        map.setMapTypeId('terrain');
+        map.setMapTypeId('roadmap');
     });
     document.getElementById("btnSatellite").addEventListener("click", function(){
         map.setMapTypeId('satellite');
