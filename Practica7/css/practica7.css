@@ -1,0 +1,17 @@
+#map{
+    flex-grow : 1;
+}
+
+html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+}
+
+#floating-panel {
+    position: absolute; 
+    bottom: 0px;
+    margin: 20px;
+}
