@@ -1,0 +1,30 @@
+#map{
+    flex-grow : 1;
+}
+
+html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+}
+
+#floating-panel {
+    position: absolute; 
+    bottom: 0px;
+    margin: 20px;
+}
+
+#floating-header {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    padding: 5px 15px;
+    padding-top: 10px;
+    color: #efefef;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
