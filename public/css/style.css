@@ -81,15 +81,32 @@ li:hover{
     margin: 20px;
 }
 
-#floating-header {
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translate(-50%);
-    text-align: center;
-    padding: 5px 25px;
-    padding-top: 10px;
-    color: #efefef;
-    border-bottom-left-radius: 45px;
-    border-bottom-right-radius: 45px;
+@media only screen and (min-width: 768px) {
+    #floating-header {
+        position: absolute;
+        top: 60px;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+        padding: 5px 25px;
+        padding-top: 10px;
+        color: #efefef;
+        border-bottom-left-radius: 45px;
+        border-bottom-right-radius: 45px;
+    }
+}
+
+@media only screen and  (max-device-width : 767px){ 
+    #floating-header {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+        padding: 5px 25px;
+        padding-top: 10px;
+        color: #efefef;
+        border-top-left-radius: 45px;
+        border-top-right-radius: 45px;
+    }      
 }
