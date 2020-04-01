@@ -22,9 +22,9 @@ html, body{
     left: 50%;
     transform: translate(-50%);
     text-align: center;
-    padding: 5px 15px;
+    padding: 5px 45px;
     padding-top: 10px;
     color: #efefef;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
 }
