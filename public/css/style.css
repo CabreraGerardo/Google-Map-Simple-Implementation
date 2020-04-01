@@ -74,3 +74,22 @@ a:hover{
 li:hover{
     background-color: #ececec;
 }
+
+#floating-panel {
+    position: absolute; 
+    bottom: 0px;
+    margin: 20px;
+}
+
+#floating-header {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    padding: 5px 45px;
+    padding-top: 10px;
+    color: #efefef;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+}
