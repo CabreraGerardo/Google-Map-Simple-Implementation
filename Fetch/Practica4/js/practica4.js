@@ -21,7 +21,7 @@ function obtenerMarcadores(map){
                mode: 'no-cors',
                cache: 'default' };
 
-    fetch('https://corona.lmao.ninja/countries')
+    fetch('https://corona.lmao.ninja/v2/countries')
     .then((response) => {
         response.json().then((datos) => {
             datos.forEach((marcador) => {
