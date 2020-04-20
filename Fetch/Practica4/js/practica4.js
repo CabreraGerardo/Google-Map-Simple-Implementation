@@ -11,7 +11,7 @@ var propiedades ={
 function obtenerMarcadores(map){
     
     var icono = {
-        url: "https://cdn.pixabay.com/photo/2020/02/26/08/41/corona-4881111_1280.png",
+        url: "https://urgentcarekids.com/wp-content/uploads/2020/03/Coronavirus.png",
         scaledSize: new google.maps.Size(25, 25),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(0, 0)
