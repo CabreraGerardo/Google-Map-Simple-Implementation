@@ -6,6 +6,9 @@ const setMenu = (user) => {
     if(user){
 
         db.collection('usuarios').doc(user.uid).get().then( doc => {
+
+            console.log(doc.data());
+
             const html= `
                 <p><b>Nombre: </b> ${doc.data().nombre} </p>
                 <p><b>Emial: </b> ${user.email} </p>
