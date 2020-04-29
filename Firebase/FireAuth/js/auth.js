@@ -109,7 +109,7 @@ formRegistrar.addEventListener('submit', (e) => {
 document.getElementById('btnGoogle').addEventListener("click", (e) => {
     var provider = new firebase.auth.GoogleAuthProvider();
 
-    auth.signInWithPopUp(provider).then(result => {
+    auth.signInWithPopup(provider).then(result => {
         var token = result.credential.accessToken;
 
         var user = result.user;
