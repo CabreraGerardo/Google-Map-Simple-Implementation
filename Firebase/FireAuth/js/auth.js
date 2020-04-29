@@ -119,7 +119,7 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
         const html= `
             <div class="row">
                 <div class="col-12 text-center">
-                    <img class="img-fluid" style="max-width: 100px" src="${user.photoURL}">
+                    <img class="img-fluid mb-3 rounded" style="max-width: 100px" src="${user.photoURL}">
                 </div>
                 <div class="col-12 text-center">
                     <p><b> ${user.displayName} </b></p>
