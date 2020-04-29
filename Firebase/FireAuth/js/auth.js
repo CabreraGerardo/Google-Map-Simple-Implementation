@@ -63,6 +63,8 @@ function mensajeError(code){
             return 'Contraseña débil. Al menos 6 caracteres';
         case 'auth/email-already-in-use':
             return 'Este correo ya se ha usado para registrar una cuenta';
+        case 'auth/account-exists-with-different-credential':
+            return 'El correo relacionado con esta cuenta ya se ha usado para crear una cuenta';
         default:
             return 'Error';
     }
@@ -128,6 +130,7 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
     })
     .catch( error => {
         console.log(error);
+        formIngresar.querySelector('.error').innerHTML = mensajeError(error.code);
     });
 });
 
@@ -153,5 +156,6 @@ document.getElementById('btnFacebook').addEventListener("click", (e) => {
     })
     .catch( error => {
         console.log(error);
+        formIngresar.querySelector('.error').innerHTML = mensajeError(error.code);
     });
 });
