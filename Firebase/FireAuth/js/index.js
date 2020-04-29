@@ -9,14 +9,17 @@ const setMenu = (user) => {
 
             console.log(doc.data());
 
-            const html= `
-                <p><b>Nombre: </b> ${doc.data().nombre} </p>
-                <p><b>Emial: </b> ${user.email} </p>
-                <p><b>Teléfono: </b> ${doc.data().telefono} </p>
-                <p><b>Dirección: </b>${doc.data().direccion} </p>
-            `;
+            if(doc.data() != undefined)
+            {
+                const html= `
+                    <p><b>Nombre: </b> ${doc.data().nombre} </p>
+                    <p><b>Emial: </b> ${user.email} </p>
+                    <p><b>Teléfono: </b> ${doc.data().telefono} </p>
+                    <p><b>Dirección: </b>${doc.data().direccion} </p>
+                `;
 
-            datosCuenta.innerHTML = html;
+                datosCuenta.innerHTML = html;
+            }
         });
 
         listaLoggedIn.forEach(item => item.style.display = 'block');

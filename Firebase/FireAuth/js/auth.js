@@ -130,3 +130,28 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
         console.log(error);
     });
 });
+
+document.getElementById('btnFacebook').addEventListener("click", (e) => {
+    var provider = new firebase.auth.FacebookAuthProvider();
+
+    auth.signInWithPopup(provider).then(result => {
+        var token = result.credential.accessToken;
+
+        var user = result.user;
+        console.log(user);
+        const html= `
+            <p><b>Nombre: </b> ${user.displayName} </p>
+            <p><b>Emial: </b> ${user.email} </p>
+            <img class="img-fluid" src="${user.photoURL}">
+        `;
+
+        datosCuenta.innerHTML = html;
+
+        $('#ingresarModal').modal('hide');
+        formIngresar.reset();
+        formIngresar.querySelector('.error').innerHTML = '';
+    })
+    .catch( error => {
+        console.log(error);
+    });
+});
