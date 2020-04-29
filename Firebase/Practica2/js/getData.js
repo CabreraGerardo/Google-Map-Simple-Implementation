@@ -5,7 +5,7 @@
     });
 });*/
 
-db.collection('usuarios').onSnapshot( snapshot => {
+db.collection('users').onSnapshot( snapshot => {
     let changes = snapshot.docChanges();
     changes.forEach(change => {
         if(change.type == "added")

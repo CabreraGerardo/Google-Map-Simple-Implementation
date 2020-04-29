@@ -71,7 +71,7 @@ function renderUsuario(doc){
 
     editar.addEventListener("click", (e) => {
         $("#editUser").modal('toggle');
-        db.collection('usuarios').doc(usuario.id).get().then( (doc) => {
+        db.collection('users').doc(usuario.id).get().then( (doc) => {
             if (doc.exists) {
                 usuario.name = doc.data().Nombre;
                 usuario.lastName = doc.data().Apellido;

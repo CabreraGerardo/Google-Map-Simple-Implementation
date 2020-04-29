@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-light">
     
@@ -19,16 +20,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Mi Cuenta <span class="sr-only">(current)</span></a>
+                    <a class="nav-link logged-in" href="#" data-toggle="modal" data-target="#cuentaModal">Mi Cuenta <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id='salir'>Salir</a>
+                    <a class="nav-link logged-in" href="#" id='salir'>Salir</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="modal" data-target="#ingresarModal">Ingresar</a>
+                    <a class="nav-link logged-out" href="#" data-toggle="modal" data-target="#ingresarModal">Ingresar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="modal" data-target="#registrarModal">Registrar</a>
+                    <a class="nav-link logged-out" href="#" data-toggle="modal" data-target="#registrarModal">Registrar</a>
                 </li>
             </ul>
             <div class="dropdown nav-item">            
@@ -68,21 +69,29 @@
 
     <div class="container">
         <div class="row text-center" id="listaDePlatillos">
-            <div class="col-12 col-md-4">
-                <img class="img-fluid" src="images/pizzaDePepperoni.jpg" alt="Pizza de Pepperoni">
-                <p>Pizza de Pepperoni</p>
-            </div>
-            <div class="col-12 col-md-4">
-                <img class="img-fluid" src="images/pizzaDeJamonConPiña.jpg" alt="Pizza Hawaiana">
-                <p>Pizza Hawaiana</p>
-            </div>
-            <div class="col-12 col-md-4">
-                <img class="img-fluid" src="images/pizzaDeCarnesFrias.jpg" alt="Pizza de Carnes Frías">
-                <p>Pizza de Carnes Frías</p>
-            </div>
         </div>
     </div>
 
+
+    <!-- Modal Mi Cuenta -->
+    <div class="modal fade" id="cuentaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Mi Cuenta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body datosCuenta">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal Ingresar -->
     <div class="modal fade" id="ingresarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -108,11 +117,24 @@
                         </div>
                         <div class="row mt-3">
                             <div class="col-12 text-center">
-                                <button class="btn btn-primary">Ingresar</button>
+                                <button class="btn btn-success">Ingresar</button>
                                 <p class="error text-danger"></p>
                             </div>
                         </div>
                     </form>
+                    <hr>
+                    <div class="row text-center">
+                        <div class="col-12 col-sm-6 text-sm-right mb-2">
+                            <button class="btn btn-danger" id="btnGoogle">
+                                <p href="#" class="m-0 fa fa-google"></p> <br>Ingresar con google 
+                            </button>
+                        </div>
+                        <div class="col-12 col-sm-6 text-sm-left mb-2">
+                            <button class="btn btn-primary" id="btnFacebook">
+                                <p href="#" class="m-0 fa fa-facebook"></p> <br>Ingresar con google 
+                            </button>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -135,12 +157,27 @@
                     <form id="formRegistrar">
                         <div class="row m-2">
                             <div class="col-12">
+                                <input class="form-control" type="text" required id="rNombre" placeholder="Ingresa tu nombre">
+                            </div>
+                        </div>
+                        <div class="row m-2">
+                            <div class="col-12">
                                 <input class="form-control" type="email" required id="rCorreo" placeholder="Ingresa tu correo">
                             </div>
                         </div>
                         <div class="row m-2">
                             <div class="col-12">
                                 <input class="form-control" type="password" required id="rPassword" placeholder="Ingresa tu contraseña">
+                            </div>
+                        </div>
+                        <div class="row m-2">
+                            <div class="col-12">
+                                <input class="form-control" type="number" step='any' required id="rTelefono" placeholder="Ingresa tu teléfono">
+                            </div>
+                        </div>
+                        <div class="row m-2">
+                            <div class="col-12">
+                                <input class="form-control" type="text" required id="rDireccion" placeholder="Ingresa tu dirección">
                             </div>
                         </div>
                         <div class="row mt-3">

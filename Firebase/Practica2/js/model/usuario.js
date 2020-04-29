@@ -7,11 +7,11 @@ class Usuario{
     }
 
     borrar(){
-        db.collection("usuarios").doc(this.id).delete();
+        db.collection("users").doc(this.id).delete();
     }
 
     agregar(){
-        db.collection("usuarios").add(
+        db.collection("users").add(
             {
                 Nombre: this.name,
                 Apellido: this.lastName,
@@ -28,7 +28,7 @@ class Usuario{
     }
 
     actualizar(){
-        db.collection("usuarios").doc(this.id).update({
+        db.collection("users").doc(this.id).update({
             Nombre: this.name,
             Apellido: this.lastName,
             Usuario: this.username
