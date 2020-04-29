@@ -117,9 +117,17 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
         var user = result.user;
         
         const html= `
-            <p><b>Nombre: </b> ${user.displayName} </p>
-            <p><b>Emial: </b> ${user.email} </p>
-            <img class="img-fluid" src="${user.photoURL}">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img class="img-fluid" style="max-width: 100px" src="${user.photoURL}">
+                </div>
+                <div class="col-12 text-center">
+                    <p><b> ${user.displayName} </b></p>
+                </div>
+                <div class="col-12 text-center">
+                    <p> ${user.email} </p>
+                </div>
+            </div>
         `;
 
         datosCuenta.innerHTML = html;
@@ -143,9 +151,17 @@ document.getElementById('btnFacebook').addEventListener("click", (e) => {
         var user = result.user;
         console.log(user);
         const html= `
-            <p><b>Nombre: </b> ${user.displayName} </p>
-            <p><b>Emial: </b> ${user.email} </p>
-            <img class="img-fluid" src="${user.photoURL}">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img class="img-fluid" style="max-width: 100px" src="${user.photoURL}">
+                </div>
+                <div class="col-12 text-center">
+                    <p><b> ${user.displayName} </b></p>
+                </div>
+                <div class="col-12 text-center">
+                    <p> ${user.email} </p>
+                </div>
+            </div>
         `;
 
         datosCuenta.innerHTML = html;
