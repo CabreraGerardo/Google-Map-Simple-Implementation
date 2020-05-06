@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creando Estilos en Mapas de Google</title>
+    <title>Sígueme</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="../public/css/style.css">
-    <link rel="stylesheet" href="css/practica9.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="css/practica6.css">
 </head>
 <body>
+
     <nav class="navbar navbar-dark bg-dark sticky-top">
-        <a class="navbar-brand" href="../index.html">
+        <a class="navbar-brand" href="../../index.html">
             <img class="img-fluid mx-sm-3" style="max-width: 40px;" src="https://freepngimg.com/thumb/map/64260-map-pin-vector-world-push-logo-drawing.png" alt="">
             Sistemas Georeferenciados
         </a>
@@ -23,45 +24,35 @@
                 <a class="dropdown-item" href="../../index.html">Inicio</a>
                 <div class="dropdown-divider"></div>
                 <h5 class="ml-3"><b>Maps</b></h5>
-                <a class="dropdown-item" href="../Practica1/Marcador.html">Práctica 1</a>
-                <a class="dropdown-item" href="../Practica2/navigator.html">Práctica 2</a>
-                <a class="dropdown-item" href="../Practica3/geolocation.html">Práctica 3</a>
-                <a class="dropdown-item" href="../Practica4/static_map.html">Práctica 4</a>
-                <a class="dropdown-item" href="../Practica5/infowindow.html">Práctica 5</a>
-                <a class="dropdown-item" href="../Practica6/current_location.html">Práctica 6</a>
-                <a class="dropdown-item" href="../Practica7/practica7.html">Práctica 7</a>
-                <a class="dropdown-item" href="../Practica8/practica8.html">Práctica 8</a>
+                <div id="dropdownMaps">
+                    
+                </div>
                 <div class="dropdown-divider"></div>
                 <h5 class="ml-3"><b>Firebase</b></h5>
-                <a class="dropdown-item" href="../Firebase/Practica1/alta_baja.html">Práctica 1</a>
-                <a class="dropdown-item" href="../Firebase/Practica2/editar.html">Práctica 2</a>
-                <a class="dropdown-item" href="../Firebase/PosicionEspia/current_location.html">Espía (Envío de Coordenada)</a>
-                <a class="dropdown-item" href="../Firebase/PosicionEspia/current_location_spy.html">Espía (Consulta de Coordenada)</a>
-                <a class="dropdown-item" href="../Firebase/FireAuth/index.html">Auth</a>
+                <div id="dropdownFirebase">
+
+                </div>
                 <div class="dropdown-divider"></div>
                 <h5 class="ml-3"><b>Fetch</b></h5>
-                <a class="dropdown-item" href="../Fetch/Practica1/practica1.html">Práctica 1</a>
-                <a class="dropdown-item" href="../Fetch/Practica2/practica2.html">Práctica 2</a>
-                <a class="dropdown-item" href="../Fetch/Practica3/practica3.html">Práctica 3</a>
-                <a class="dropdown-item" href="../Fetch/Practica4/practica4.html">Práctica 4</a>
+                <div id="dropdownFetch">
+
+                </div>
             </div>
         </div>
     </nav>
 
-    <div id="map">
-
-    </div>
+    <div id="map"></div>
 
     <div id="floating-header" class="bg-dark">
-        <h4>Estilos en Mapas</h4>
+        <h4>Ubicación en tiempo real</h4>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/c7b62fdfb0.js" crossorigin="anonymous"></script>
-    <script src="../public/js/public.js"></script>
-    <script src="js/practica9.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADjOfdGIg-7JiqjoTstMN9el4g-nLhxxA&callback=initMap" async defer></script>
+    <script src="../../public/js/public.js"></script>
+    <script src="js/practica6.js"></script>
 </body>
 </html>
