@@ -6,13 +6,13 @@ function initMap(){
             lng: -101.711598
         },
         zoom: 14,
-        mapTypeControlOptions: { mpaTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain', 'style_map']}
+        mapTypeControlOptions: { mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain', 'style_map']}
     };
 
     var mapa = document.getElementById('map');
 
     var map = new google.maps.Map(mapa, propiedades);
-
+    
     var styleMapType = new google.maps.StyledMapType(
         [
             
@@ -96,9 +96,9 @@ function initMap(){
             }
         ],
         {name: 'Mapa Oscuro'}
-    
     );
 
     map.mapTypes.set('style_map', styleMapType);
     map.setMapTypeId('style_map');
+
 }
