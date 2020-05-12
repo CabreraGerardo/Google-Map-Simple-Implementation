@@ -1,0 +1,18 @@
+.logged-in, .logged-out{
+    display: none;
+}
+
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    background: rgb(181,181,181);
+    background: linear-gradient(0deg, rgba(181,181,181,1) 0%, rgba(219,219,219,1) 4%, rgba(239,239,239,1) 13%);
+    background-attachment: fixed;
+}
+
+#map{
+    flex-grow : 1;
+}
