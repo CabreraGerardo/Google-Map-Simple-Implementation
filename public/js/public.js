@@ -29,6 +29,7 @@ document.getElementById('dropdownFirebase').innerHTML += `
     <a class="dropdown-item" href="../../Firebase/PosicionEspia/current_location.html">Espía (Envío de Coordenada)</a>
     <a class="dropdown-item" href="../../Firebase/PosicionEspia/current_location_spy.html">Espía (Consulta de Coordenada)</a>
     <a class="dropdown-item" href="../../Firebase/FireAuth/index.html">Auth</a>
+    <a class="dropdown-item" href="../../Firebase/ShareLocation/index.html">Comparte Ubicación</a>
 `;
 
 document.getElementById('dropdownFetch').innerHTML += `    
