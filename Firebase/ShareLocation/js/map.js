@@ -7,9 +7,6 @@ function initMap(){
         zoom: 15
     });
 
-    user = auth.currentUser;
-    console.log(user);
-
     var icono = {
         url: "https://d1s6fstvea5cci.cloudfront.net/content/themes/vtnz/resources/assets/images/pulse_dot.gif",
         scaledSize: new google.maps.Size(30, 30),

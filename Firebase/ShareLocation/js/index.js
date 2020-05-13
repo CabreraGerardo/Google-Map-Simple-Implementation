@@ -46,6 +46,7 @@ formRegistrar.addEventListener('submit', (e) => {
 
         return db.collection('usuariosUbicacion').doc(cred.user.uid).set({
             nombre: formRegistrar['rNombre'].value,
+            photoURL: cred.user.photoURL ? cred.user.photoURL : null
         });
     })
     .then(() => {

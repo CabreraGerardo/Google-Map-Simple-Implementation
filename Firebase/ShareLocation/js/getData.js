@@ -13,9 +13,8 @@ function loadUsers(){
             {
                 if(change.doc.id != localStorage.user)
                 {
-
                     var icono = {
-                        url:"./assets/user-placeholder.png",
+                        url: data.photoURL ? data.photoURL : "./assets/user-placeholder.png",
                         scaledSize: new google.maps.Size(45, 45),
                         origin: new google.maps.Point(0, 0),
                         anchor: new google.maps.Point(0, 0)
@@ -37,6 +36,20 @@ function loadUsers(){
                     });
 
                     markers.push(marker);
+                }
+                else
+                {
+                    document.getElementById('userData').innerHTML = `
+                        <div class="col-12 mb-3">
+                            <h3><b>Tu cuenta:</b></h3>
+                        </div>
+                        <div class="col-3">
+                            <img class="img-fluid" style="max-height: 350px;" src="${data.photoURL}">
+                        </div>
+                        <div class="col-9 d-flex align-items-center mb-2">
+                            <h4>${data.nombre}</h4>
+                        </div>
+                    `;
                 }
                 
             }

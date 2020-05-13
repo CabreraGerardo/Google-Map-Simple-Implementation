@@ -75,12 +75,6 @@ li:hover{
     background-color: #ececec;
 }
 
-#floating-panel {
-    position: absolute; 
-    bottom: 0px;
-    margin: 20px;
-}
-
 @media only screen and (min-width: 768px) {
     #floating-header {
         position: absolute;

@@ -16,3 +16,12 @@ body, html {
 #map{
     flex-grow : 1;
 }
+
+#userData {
+    position: absolute; 
+    bottom: 0px;    
+    padding: 50px 25px;
+    padding-top: 10px;
+    border-top-right-radius: 45px;
+    margin-right: 65px;
+}
