@@ -65,25 +65,10 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
     var provider = new firebase.auth.GoogleAuthProvider();
 
     auth.signInWithPopup(provider).then(result => {
-        var token = result.credential.accessToken;
-
-        var user = result.user;
-        
-        const html= `
-            <div class="row">
-                <div class="col-12 text-center">
-                    <img class="img-fluid mb-3 rounded" style="max-width: 100px" src="${user.photoURL}">
-                </div>
-                <div class="col-12 text-center">
-                    <p><b> ${user.displayName} </b></p>
-                </div>
-                <div class="col-12 text-center">
-                    <p> ${user.email} </p>
-                </div>
-            </div>
-        `;
-
-        datosCuenta.innerHTML = html;
+        db.collection('usuariosUbicacion').doc(result.user.uid).set({
+            nombre: formRegistrar['rNombre'].value,
+            photoURL: result.user.photoURL ? result.user.photoURL : null
+        });
 
         $('#ingresarModal').modal('hide');
         formIngresar.reset();
@@ -100,25 +85,10 @@ document.getElementById('btnFacebook').addEventListener("click", (e) => {
     var provider = new firebase.auth.FacebookAuthProvider();
 
     auth.signInWithPopup(provider).then(result => {
-        var token = result.credential.accessToken;
-
-        var user = result.user;
-        console.log(user);
-        const html= `
-            <div class="row">
-                <div class="col-12 text-center">
-                    <img class="img-fluid mb-3 rounded" style="max-width: 150px" src="${user.photoURL}">
-                </div>
-                <div class="col-12 text-center">
-                    <p><b> ${user.displayName} </b></p>
-                </div>
-                <div class="col-12 text-center">
-                    <p> ${user.email} </p>
-                </div>
-            </div>
-        `;
-
-        datosCuenta.innerHTML = html;
+        db.collection('usuariosUbicacion').doc(result.user.uid).set({
+            nombre: formRegistrar['rNombre'].value,
+            photoURL: result.user.photoURL ? result.user.photoURL : null
+        });
 
         $('#ingresarModal').modal('hide');
         formIngresar.reset();
