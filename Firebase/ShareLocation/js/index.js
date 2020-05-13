@@ -24,6 +24,17 @@ formIngresar.addEventListener('submit', (e) => {
         formIngresar.querySelector('.error').innerHTML = '';
         setPos();
         loadUsers();
+        document.getElementById('userData').innerHTML = `
+        <div class="col-12 mb-3">
+            <h3><b>Tu cuenta:</b></h3>
+        </div>
+        <div class="col-3">
+            <img class="img-fluid" style="max-height: 350px;" src="${cred.user.photoURL ? cred.user.photoURL : "./assets/user-placeholder.png"}">
+        </div>
+        <div class="col-9 d-flex align-items-center mb-2">
+            <h4>${cred.user.displayName}</h4>
+        </div>
+    `;
     })
     .catch(error => {
         console.log(error);
@@ -55,6 +66,17 @@ formRegistrar.addEventListener('submit', (e) => {
         formRegistrar.querySelector('.error').innerHTML = '';
         setPos();
         loadUsers();
+        document.getElementById('userData').innerHTML = `
+            <div class="col-12 mb-3">
+                <h3><b>Tu cuenta:</b></h3>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" style="max-height: 350px;" src="${cred.user.photoURL ? cred.user.photoURL : "./assets/user-placeholder.png"}">
+            </div>
+            <div class="col-9 d-flex align-items-center mb-2">
+                <h4>${cred.user.displayName}</h4>
+            </div>
+        `;
     })
     .catch(error => {
         console.log(error);
@@ -79,6 +101,17 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
         formIngresar.querySelector('.error').innerHTML = '';
         setPos();
         loadUsers();
+        document.getElementById('userData').innerHTML = `
+            <div class="col-12 mb-3">
+                <h3><b>Tu cuenta:</b></h3>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" style="max-height: 350px;" src="${result.user.photoURL ? result.user.photoURL : "./assets/user-placeholder.png"}">
+            </div>
+            <div class="col-9 d-flex align-items-center mb-2">
+                <h4>${result.user.displayName}</h4>
+            </div>
+        `;
     })
     .catch( error => {
         console.log(error);
@@ -103,6 +136,17 @@ document.getElementById('btnFacebook').addEventListener("click", (e) => {
         formIngresar.querySelector('.error').innerHTML = '';
         setPos();
         loadUsers();
+        document.getElementById('userData').innerHTML = `
+            <div class="col-12 mb-3">
+                <h3><b>Tu cuenta:</b></h3>
+            </div>
+            <div class="col-3">
+                <img class="img-fluid" style="max-height: 350px;" src="${result.user.photoURL ? result.user.photoURL : "./assets/user-placeholder.png"}">
+            </div>
+            <div class="col-9 d-flex align-items-center mb-2">
+                <h4>${result.user.displayName}</h4>
+            </div>
+        `;
     })
     .catch( error => {
         console.log(error);
