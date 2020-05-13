@@ -44,7 +44,7 @@ function loadUsers(){
                             <h3><b>Tu cuenta:</b></h3>
                         </div>
                         <div class="col-3">
-                            <img class="img-fluid" style="max-height: 350px;" src="${data.photoURL}">
+                            <img class="img-fluid" style="max-height: 350px;" src="${data.photoURL ? data.photoURL : "./assets/user-placeholder.png"}">
                         </div>
                         <div class="col-9 d-flex align-items-center mb-2">
                             <h4>${data.nombre}</h4>
