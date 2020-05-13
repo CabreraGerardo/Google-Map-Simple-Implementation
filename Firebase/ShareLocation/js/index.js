@@ -66,7 +66,7 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
 
     auth.signInWithPopup(provider).then(result => {
         db.collection('usuariosUbicacion').doc(result.user.uid).set({
-            nombre: formRegistrar['rNombre'].value,
+            nombre: result.user.displayName,
             photoURL: result.user.photoURL ? result.user.photoURL : null
         });
 
@@ -86,7 +86,7 @@ document.getElementById('btnFacebook').addEventListener("click", (e) => {
 
     auth.signInWithPopup(provider).then(result => {
         db.collection('usuariosUbicacion').doc(result.user.uid).set({
-            nombre: formRegistrar['rNombre'].value,
+            nombre: result.user.displayName,
             photoURL: result.user.photoURL ? result.user.photoURL : null
         });
 
