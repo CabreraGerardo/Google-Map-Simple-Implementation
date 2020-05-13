@@ -65,6 +65,9 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
     var provider = new firebase.auth.GoogleAuthProvider();
 
     auth.signInWithPopup(provider).then(result => {
+
+        localStorage.user = result.user.uid;
+
         db.collection('usuariosUbicacion').doc(result.user.uid).set({
             nombre: result.user.displayName,
             photoURL: result.user.photoURL ? result.user.photoURL : null
@@ -85,6 +88,9 @@ document.getElementById('btnFacebook').addEventListener("click", (e) => {
     var provider = new firebase.auth.FacebookAuthProvider();
 
     auth.signInWithPopup(provider).then(result => {
+
+        localStorage.user = result.user.uid;
+        
         db.collection('usuariosUbicacion').doc(result.user.uid).set({
             nombre: result.user.displayName,
             photoURL: result.user.photoURL ? result.user.photoURL : null
