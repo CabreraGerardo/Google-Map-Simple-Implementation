@@ -22,7 +22,7 @@ formIngresar.addEventListener('submit', (e) => {
         $('#ingresarModal').modal('hide');
         formIngresar.reset();
         formIngresar.querySelector('.error').innerHTML = '';
-
+        setPos();
         loadUsers();
     })
     .catch(error => {
@@ -53,6 +53,7 @@ formRegistrar.addEventListener('submit', (e) => {
         $('#registrarModal').modal('hide');
         formRegistrar.reset();
         formRegistrar.querySelector('.error').innerHTML = '';
+        setPos();
         loadUsers();
     })
     .catch(error => {
@@ -76,6 +77,7 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
         $('#ingresarModal').modal('hide');
         formIngresar.reset();
         formIngresar.querySelector('.error').innerHTML = '';
+        setPos();
         loadUsers();
     })
     .catch( error => {
@@ -90,7 +92,7 @@ document.getElementById('btnFacebook').addEventListener("click", (e) => {
     auth.signInWithPopup(provider).then(result => {
 
         localStorage.user = result.user.uid;
-        
+
         db.collection('usuariosUbicacion').doc(result.user.uid).set({
             nombre: result.user.displayName,
             photoURL: result.user.photoURL ? result.user.photoURL : null
@@ -99,6 +101,7 @@ document.getElementById('btnFacebook').addEventListener("click", (e) => {
         $('#ingresarModal').modal('hide');
         formIngresar.reset();
         formIngresar.querySelector('.error').innerHTML = '';
+        setPos();
         loadUsers();
     })
     .catch( error => {

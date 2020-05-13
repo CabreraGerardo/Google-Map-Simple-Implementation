@@ -24,13 +24,10 @@ function initMap(){
     moverPosicion(marker);
 }
 
-async function getPos(){
+function setPos(){
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(posicion => {
-            return pos = {
-                lat: posicion.coords.latitude,
-                lng: posicion.coords.longitude
-            };
+            updatePosition(posicion.coords.latitude, posicion.coords.longitude);
         });
     }
 }
