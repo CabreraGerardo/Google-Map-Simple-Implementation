@@ -199,11 +199,11 @@ document.getElementById('mainFirebase').innerHTML += `
     <li class="list-group-item rounded p-0 my-2 my-md-0">
         <a class="link-title" href="Firebase/ShareLocation/index.html">
             <div class="row m-0">
-                <div class="col-12 col-md-2 d-flex justify-content-center align-items-center rounded" style="font-size: 48px; color: rgb(138, 207, 159); background-color:rgb(98, 112, 138);">
-                    <i class="fas fa-address-card m-3"></i>
+                <div class="col-12 col-md-2 d-flex justify-content-center align-items-center rounded" style="font-size: 48px; color: #6BD5D6; background-color: #B18E58;">
+                    <i class="fas fa-users m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">OAuth</p>
+                    <p class="link-title">Ubicaciones</p>
                     <p class="link-body">Comparte tu ubicación con otros usuarios</p>
                 </div>
             </div>
