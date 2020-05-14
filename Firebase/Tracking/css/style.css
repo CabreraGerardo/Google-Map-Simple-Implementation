@@ -13,11 +13,25 @@ body, html {
     flex-grow : 1;
 }
 
-#userData {
+#dataContainer {
     position: absolute; 
     bottom: 0px;    
-    padding: 50px 25px;
+    padding: 20px 25px;
     padding-top: 10px;
     border-top-right-radius: 45px;
     margin-right: 65px;
+}
+
+@media only screen and  (max-device-width : 767px){ 
+    #dataContainer {
+        position: absolute; 
+        bottom: 0px;    
+        padding: 20px 25px;
+        padding-top: 10px;
+        border-top-right-radius: 45px;
+        margin-right: 65px;
+        overflow-x: hidden; 
+        overflow-x: auto;
+        max-height: 250px;
+    }   
 }
