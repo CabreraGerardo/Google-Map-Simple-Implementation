@@ -32,6 +32,6 @@ body, html {
         margin-right: 65px;
         overflow-x: hidden; 
         overflow-x: auto;
-        max-height: 250px;
+        max-height: 180px;
     }   
 }
