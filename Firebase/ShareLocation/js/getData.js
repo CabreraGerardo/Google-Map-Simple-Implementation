@@ -7,11 +7,11 @@ function loadUsers(){
             console.log(change.doc.data());
             data = change.doc.data();
 
-            var pos = new google.maps.LatLng(data.location.latitude, data.location.longitude);
-            
-            if(change.type == "added")
+            if(change.doc.id != localStorage.user)
             {
-                if(change.doc.id != localStorage.user)
+                var pos = new google.maps.LatLng(data.location.latitude, data.location.longitude);
+                
+                if(change.type == "added")
                 {
                     var icono = {
                         url: data.photoURL ? data.photoURL : "./assets/user-placeholder.png",
@@ -36,29 +36,30 @@ function loadUsers(){
                     });
 
                     markers.push(marker);
+                    
                 }
-                else
-                {
-                    document.getElementById('userData').innerHTML = `
-                        <div class="col-12 mb-3">
-                            <h3><b>Tu cuenta:</b></h3>
-                        </div>
-                        <div class="col-3">
-                            <img class="img-fluid" style="max-height: 350px;" src="${data.photoURL ? data.photoURL : "./assets/user-placeholder.png"}">
-                        </div>
-                        <div class="col-9 d-flex align-items-center mb-2">
-                            <h4>${data.nombre}</h4>
-                        </div>
-                    `;
-                }
-                
-            }
-            else if(change.type == "modified")
-            {                
-                console.log(markers);
-                let markerIndex = markers.findIndex(marker => marker.id == change.doc.id);
+                else if(change.type == "modified")
+                {                
+                    console.log(markers);
+                    
+                    let markerIndex = markers.findIndex(marker => marker.id == change.doc.id);
 
-                markers[markerIndex].setPosition(pos);
+                    markers[markerIndex].setPosition(pos);
+                }
+            }
+            else
+            {
+                document.getElementById('userData').innerHTML = `
+                    <div class="col-12 mb-3">
+                        <h3><b>Tu cuenta:</b></h3>
+                    </div>
+                    <div class="col-3">
+                        <img class="img-fluid" style="max-height: 350px;" src="${data.photoURL ? data.photoURL : "./assets/user-placeholder.png"}">
+                    </div>
+                    <div class="col-9 d-flex align-items-center mb-2">
+                        <h4>${data.nombre}</h4>
+                    </div>
+                `;
             }
         });
     });
