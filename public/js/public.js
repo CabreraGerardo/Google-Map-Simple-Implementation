@@ -21,6 +21,7 @@ document.getElementById('dropdownMaps').innerHTML += `
     <a class="dropdown-item" href="../../Maps/Practica7/practica7.html">Práctica 7</a>
     <a class="dropdown-item" href="../../Maps/Practica8/practica8.html">Práctica 8</a>
     <a class="dropdown-item" href="../../Maps/Practica9/mapStyle.html">Práctica 9</a>
+    <a class="dropdown-item" href="../../Firebase/Tracking/index.html">Monitoreo de Vehículo</a>
 `;
 
 document.getElementById('dropdownFirebase').innerHTML += `
@@ -30,7 +31,6 @@ document.getElementById('dropdownFirebase').innerHTML += `
     <a class="dropdown-item" href="../../Firebase/PosicionEspia/current_location_spy.html">Espía (Consulta de Coordenada)</a>
     <a class="dropdown-item" href="../../Firebase/FireAuth/index.html">Auth</a>
     <a class="dropdown-item" href="../../Firebase/ShareLocation/index.html">Comparte Ubicación</a>
-    <a class="dropdown-item" href="../../Firebase/Tracking/index.html">Monitoreo de Vehículo</a>
 `;
 
 document.getElementById('dropdownFetch').innerHTML += `    
