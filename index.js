@@ -126,7 +126,7 @@ document.getElementById('mainMaps').innerHTML += `
     </li>
 
     <li class="list-group-item rounded p-0 my-2 my-md-0">
-        <a class="link-title" href="Firebase/Tracking/index.html">
+        <a class="link-title" href="Maps/Tracking/index.html">
             <div class="row m-0">
                 <div class="col-12 col-md-2 d-flex justify-content-center align-items-center rounded" style="font-size: 48px; color: #853030; background-color: #7FA9A6;">
                     <i class="fas fa-car m-3"></i>
