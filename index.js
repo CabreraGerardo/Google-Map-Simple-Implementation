@@ -6,7 +6,7 @@ document.getElementById('mainMaps').innerHTML += `
                     <i class="fas fa-map-marker-alt m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 1</p>
+                    <h4 class="link-title">Práctica 1</h4>
                     <p class="link-body">Implementación básica de un <b>Mapa de Google</b> y un <b>Marcador</b>.</p>    
                 </div>
             </div>
@@ -20,7 +20,7 @@ document.getElementById('mainMaps').innerHTML += `
                     <i class="fas fa-info-circle m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 2</p>
+                    <h4 class="link-title">Práctica 2</h4>
                     <p class="link-body">Uso del objeto <b>Navigator</b> para obtener información del navegador.</p>
                 </div>
             </div>
@@ -34,7 +34,7 @@ document.getElementById('mainMaps').innerHTML += `
                     <i class="fas fa-search-location m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 3</p>
+                    <h4 class="link-title">Práctica 3</h4>
                     <p class="link-body">Uso de la geolocalización del objeto <b>Navigator</b> para obtener las coordenadas del dispositivo.</p>
                 </div>
             </div>
@@ -48,7 +48,7 @@ document.getElementById('mainMaps').innerHTML += `
                     <i class="fas fa-images m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 4</p>
+                    <h4 class="link-title">Práctica 4</h4>
                     <p class="link-body">Uso de la api de <b>Static Map</b> y la geolocalización del objeto <b>Navigator</b> para la creración de una imágen estática de un mapa.</p>
                 </div>
             </div>
@@ -62,7 +62,7 @@ document.getElementById('mainMaps').innerHTML += `
                     <i class="far fa-window-maximize m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 5</p>
+                    <h4 class="link-title">Práctica 5</h4>
                     <p class="link-body">Implementación de la herramienta <b>Info Window</b>.</p>
                 </div>
             </div>
@@ -76,7 +76,7 @@ document.getElementById('mainMaps').innerHTML += `
                     <i class="fas fa-search-location m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 6</p>
+                    <h4 class="link-title">Práctica 6</h4>
                     <p class="link-body">Implementación de localización en tiempo real.</p>
                 </div>
             </div>
@@ -90,7 +90,7 @@ document.getElementById('mainMaps').innerHTML += `
                     <i class="fas fa-object-group m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 7</p>
+                    <h4 class="link-title">Práctica 7</h4>
                     <p class="link-body">Implementación de <b>MarkerCluster</b> para la agrupación de marcadores en un mapa.</p>
                 </div>
             </div>
@@ -104,7 +104,7 @@ document.getElementById('mainMaps').innerHTML += `
                     <i class="fas fa-language m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 8</p>
+                    <h4 class="link-title">Práctica 8</h4>
                     <p class="link-body">Uso de diferentes idiomas en un mapa.</p>
                 </div>
             </div>
@@ -118,7 +118,7 @@ document.getElementById('mainMaps').innerHTML += `
                     <i class="fas fa-fill-drip m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 8</p>
+                    <h4 class="link-title">Práctica 8</h4>
                     <p class="link-body">Uso de diferentes idiomas en un mapa.</p>
                 </div>
             </div>
@@ -132,7 +132,7 @@ document.getElementById('mainMaps').innerHTML += `
                     <i class="fas fa-car m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Monitoreo de Vehículo</p>
+                    <h4 class="link-title">Monitoreo de Vehículo</h4>
                     <p class="link-body">Monitoreamineto de la posisción y velocidad de un objeto en un mapa.</p>
                 </div>
             </div>
@@ -146,7 +146,7 @@ document.getElementById('mainMaps').innerHTML += `
                     <i class="fas fa-arrows-alt m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Controles de Mapas</p>
+                    <h4 class="link-title">Controles de Mapas</h4>
                     <p class="link-body">Configuración de los controles en un <b>Google Map</b></p>
                 </div>
             </div>
@@ -162,7 +162,7 @@ document.getElementById('mainFirebase').innerHTML += `
                     <i class="fas fa-fire m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 1</p>
+                    <h4 class="link-title">Práctica 1</h4>
                     <p class="link-body">Implementación básica de <b>Firebase</b>. Registro y Borrado.</p>
                 </div>
             </div>
@@ -176,7 +176,7 @@ document.getElementById('mainFirebase').innerHTML += `
                     <i class="fas fa-file-code m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 2</p>
+                    <h4 class="link-title">Práctica 2</h4>
                     <p class="link-body">Implementación de edición en <strong>Firebase</strong>. Segmentación de código en diferentes archivos.</p>
                 </div>
             </div>
@@ -195,13 +195,13 @@ document.getElementById('mainFirebase').innerHTML += `
                     </div>
                     <div class="col-12 col-md-6 m-0 text-center" style="margin-right: 0px !important;">
                         <a class="link-title" href="Firebase/PosicionEspia/current_location.html">
-                            <p class="link-title">Envío de Coordenadas</p>
+                            <h4 class="link-title">Envío de Coordenadas</h4>
                             <p class="link-body">Uso del objeto <strong>Navigator</strong> para obtener la ubicación actual. Uso de <strong>Firebase</strong> para almacenar las coordenadas.</p>
                         </a>
                     </div>
                     <div class="col-12 col-md-6 m-0 text-center">
                         <a class="link-title" href="Firebase/PosicionEspia/current_location_spy.html">
-                            <p class="link-title">Monitoreo de Coordenadas</p>
+                            <h4 class="link-title">Monitoreo de Coordenadas</h4>
                             <p class="link-body">Uso de <strong>Firebase</strong> para consultar coordenadas y mostrarlas en un <strong>Google Map</strong>.</p>   
                         </a>
                     </div>
@@ -217,7 +217,7 @@ document.getElementById('mainFirebase').innerHTML += `
                     <i class="fas fa-address-card m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">OAuth</p>
+                    <h4 class="link-title">OAuth</h4>
                     <p class="link-body">Implementación de <strong>Firebase OAuth</strong>.</p>
                 </div>
             </div>
@@ -231,7 +231,7 @@ document.getElementById('mainFirebase').innerHTML += `
                     <i class="fas fa-users m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Ubicaciones</p>
+                    <h4 class="link-title">Ubicaciones</h4>
                     <p class="link-body">Comparte tu ubicación con otros usuarios</p>
                 </div>
             </div>
@@ -247,7 +247,7 @@ document.getElementById('mainFetch').innerHTML += `
                     <i class="fas fa-file m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 1</p>
+                    <h4 class="link-title">Práctica 1</h4>
                     <p class="link-body">Uso del método <b>Fetch</b> para consultar un archivo <b>JSON</b> local.</p>
                 </div>
             </div>
@@ -261,7 +261,7 @@ document.getElementById('mainFetch').innerHTML += `
                     <i class="fas fa-server m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 2</p>
+                    <h4 class="link-title">Práctica 2</h4>
                     <p class="link-body">Uso del método <b>Fetch</b> para consultar un archivo <b>JSON</b> en línea.</p>
                 </div>
             </div>
@@ -275,7 +275,7 @@ document.getElementById('mainFetch').innerHTML += `
                     <i class="fas fa-map-marker m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 3</p>
+                    <h4 class="link-title">Práctica 3</h4>
                     <p class="link-body">Uso de <b>Google Maps</b> para mostrar diferentes marcadors usando un arreglo.</p>
                 </div>
             </div>
@@ -289,7 +289,7 @@ document.getElementById('mainFetch').innerHTML += `
                     <i class="fas fa-virus m-3"></i>
                 </div>
                 <div class="col-12 col-md-10 pt-2">
-                    <p class="link-title">Práctica 4</p>
+                    <h4 class="link-title">Práctica 4</h4>
                     <p class="link-body">Uso del método <b>Fetch</b> para consultar una <b>API</b> con las estadísticas del coronavirus en diferentes paises.</p>
                 </div>
             </div>

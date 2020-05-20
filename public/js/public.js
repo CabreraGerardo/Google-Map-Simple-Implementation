@@ -1,15 +1,4 @@
-$('#btnDropdownPracticas').click(function() {
-    if($("#collapseBtn").is(":visible"))
-    {
-        document.getElementById('dropdownPracticas').style.left = 'auto';
-        document.getElementById('dropdownPracticas').style.right = 'auto';
-    }
-    else
-    {
-        document.getElementById('dropdownPracticas').style.left = 'auto';
-        document.getElementById('dropdownPracticas').style.right = '0px';
-    }
-});
+
 
 document.getElementById('dropdownMaps').innerHTML += `
     <a class="dropdown-item" href="../../Maps/Practica1/Marcador.html">Práctica 1</a>

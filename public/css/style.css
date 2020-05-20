@@ -11,10 +11,15 @@
         --container-background: rgb(175, 174, 174);
     }
 }*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&family=Raleway:wght@500&display=swap');
+
+h1, h2, h3, h4, h5{
+    font-family: 'Raleway', sans-serif;
+}
 
 body{
     background-color: #efefef;
-    font-family: 'Raleway', serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 /*.container{
@@ -57,14 +62,12 @@ body{
 .link-title{
     font-size: x-large;
     color: rgb(51, 51, 143);
-    font-weight: bold;
     margin-bottom: 0;
 }
 
 .link-body{
     font-size: medium;
     color: rgb(44, 44, 44);
-    font-weight: normal;
 }
 
 a:hover{
@@ -88,6 +91,13 @@ li:hover{
         border-bottom-left-radius: 45px;
         border-bottom-right-radius: 45px;
     }
+
+    #dropdownPracticas{
+        left: auto;
+        right: 0px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
 }
 
 @media only screen and  (max-device-width : 767px){ 
@@ -103,4 +113,12 @@ li:hover{
         border-top-left-radius: 45px;
         border-top-right-radius: 45px;
     }      
+
+    #dropdownPracticas{
+        left: 0px;
+        right:auto;
+        max-height: 50vh;
+        overflow-y: auto;
+    }
 }
+
