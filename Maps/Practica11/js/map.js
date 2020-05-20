@@ -13,8 +13,17 @@ var controlTypes = [
         description: 'Distribución de controles por defecto',
         properties: {
             center: center,
-            zoom: zoom
-        }
+            zoom: zoom,
+            restriction: {
+                latLngBounds: {
+                    north: 90,
+                    south: -90,
+                    west: -180,
+                    east: 180
+                },
+                strictBounds: false
+            },
+        },
     },
 ];
 
@@ -87,7 +96,16 @@ function initMap(){
                 streetViewControlOptions: {
                     position: google.maps.ControlPosition.LEFT_TOP
                 },
-                fullscreenControl: true
+                fullscreenControl: true,
+                restriction: {
+                    latLngBounds: {
+                        north: 90,
+                        south: -90,
+                        west: -180,
+                        east: 180
+                    },
+                    strictBounds: false
+                },
             }
         },
         {
@@ -104,7 +122,21 @@ function initMap(){
                         east: -101.092990
                     },
                     strictBounds: false
-                }
+                },
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                    position: google.maps.ControlPosition.TOP_LEFT
+                },
+                zoomControl: true,
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.RIGHT_BOTTOM
+                },
+                scaleControl: true,
+                streetViewControl: true,
+                streetViewControlOptions: {
+                    position: google.maps.ControlPosition.RIGHT_BOTTOM
+                },
             }
         }
     );
