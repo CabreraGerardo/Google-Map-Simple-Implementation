@@ -138,6 +138,20 @@ document.getElementById('mainMaps').innerHTML += `
             </div>
         </a>
     </li>
+
+    <li class="list-group-item rounded p-0 my-2 my-md-0">
+        <a class="link-title" href="Maps/Practica11/index.html">
+            <div class="row m-0">
+                <div class="col-12 col-md-2 d-flex justify-content-center align-items-center rounded" style="font-size: 48px; color: #373899; background-color: #91F585;">
+                    <i class="fas fa-arrows-alt m-3"></i>
+                </div>
+                <div class="col-12 col-md-10 pt-2">
+                    <p class="link-title">Controles de Mapas</p>
+                    <p class="link-body">Configuración de los controles en un <b>Google Map</b></p>
+                </div>
+            </div>
+        </a>
+    </li>
 `;
 
 document.getElementById('mainFirebase').innerHTML += `

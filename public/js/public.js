@@ -22,6 +22,7 @@ document.getElementById('dropdownMaps').innerHTML += `
     <a class="dropdown-item" href="../../Maps/Practica8/practica8.html">Práctica 8</a>
     <a class="dropdown-item" href="../../Maps/Practica9/mapStyle.html">Práctica 9</a>
     <a class="dropdown-item" href="../../Maps/Tracking/index.html">Monitoreo de Vehículo</a>
+    <a class="dropdown-item" href="../../Maps/Practica11/index.html">Controles de Mapas</a>
 `;
 
 document.getElementById('dropdownFirebase').innerHTML += `

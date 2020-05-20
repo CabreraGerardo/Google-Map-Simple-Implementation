@@ -1,0 +1,43 @@
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    background: rgb(181,181,181);
+    background: linear-gradient(0deg, rgba(181,181,181,1) 0%, rgba(219,219,219,1) 4%, rgba(239,239,239,1) 13%);
+    background-attachment: fixed;
+}
+
+#map{
+    flex-grow : 1;
+}
+
+#dataContainer {
+    position: absolute; 
+    bottom: 0px;    
+    padding: 25px 25px;
+    padding-top: 10px;
+    border-top-right-radius: 45px;
+    margin-right: 65px;
+    transition: all .5s linear;
+}
+
+@media only screen and  (max-device-width : 767px){ 
+    #dataContainer {
+        position: absolute; 
+        bottom: 0px;    
+        padding: 25px 25px;
+        padding-top: 10px;
+        border-top-right-radius: 45px;
+        margin-right: 65px;
+        overflow-x: hidden; 
+        overflow-x: auto;
+        max-height: 180px;
+    }   
+}
+
+.btn-map:hover{
+    border-radius: 5px;
+    background-color: #D8D8D8;
+}
