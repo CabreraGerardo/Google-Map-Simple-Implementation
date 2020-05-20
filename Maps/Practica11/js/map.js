@@ -44,7 +44,10 @@ function initMap(){
                 center: center,
                 zoom: zoom,
                 zoomControl: false,
-                scaleControl: true
+                scaleControl: true,
+                mapTypeControl: true,
+                streetViewControl: true,
+                fullscreenControl: true
             }
         },
         {
