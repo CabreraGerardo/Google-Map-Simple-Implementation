@@ -60,7 +60,11 @@ function initMap(){
                 mapTypeControlOptions: {
                     style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
                     mapTypeIds: ['roadmap', 'satellite', 'terrain']
-                }
+                },
+                streetViewControl: true,
+                fullscreenControl: true,
+                zoomControl: true,
+                scaleControl: true,
             }
         },
         {
