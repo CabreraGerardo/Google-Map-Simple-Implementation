@@ -116,6 +116,13 @@ function setType(){
     document.getElementById('title').innerHTML = `${controlTypes[current].title}`;
     document.getElementById('description').innerHTML = `${controlTypes[current].description}`;
     map.setOptions(controlTypes[current].properties);
+
+    if(controlTypes[current].title == 'Posiciones de Controles'){
+        document.getElementById("floating-header").style.left = "40%";
+    }
+    else{
+        document.getElementById("floating-header").style.left = "50%";
+    }
 }
 
 document.getElementById('btnPrev').addEventListener('click', ev => {
