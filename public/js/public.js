@@ -12,6 +12,7 @@ document.getElementById('dropdownMaps').innerHTML += `
     <a class="dropdown-item" href="../../Maps/Practica9/mapStyle.html">Práctica 9</a>
     <a class="dropdown-item" href="../../Maps/Tracking/index.html">Monitoreo de Vehículo</a>
     <a class="dropdown-item" href="../../Maps/Practica11/index.html">Controles de Mapas</a>
+    <a class="dropdown-item" href="../../Maps/Practica12/index.html">Eventos en Mapas</a>
 `;
 
 document.getElementById('dropdownFirebase').innerHTML += `

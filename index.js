@@ -152,6 +152,20 @@ document.getElementById('mainMaps').innerHTML += `
             </div>
         </a>
     </li>
+
+    <li class="list-group-item rounded p-0 my-2 my-md-0">
+        <a class="link-title" href="Maps/Practica12/index.html">
+            <div class="row m-0">
+                <div class="col-12 col-md-2 d-flex justify-content-center align-items-center rounded" style="font-size: 48px; color: #6F6E55; background-color: #9DF3E4;">
+                    <i class="fas fa-hand-pointer m-3"></i>
+                </div>
+                <div class="col-12 col-md-10 pt-2">
+                    <h4 class="link-title">Eventos en Mapas</h4>
+                    <p class="link-body">Configuración de los eventos dentro de un <b>Google Map</b></p>
+                </div>
+            </div>
+        </a>
+    </li>
 `;
 
 document.getElementById('mainFirebase').innerHTML += `
