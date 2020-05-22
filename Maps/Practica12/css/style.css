@@ -13,30 +13,60 @@ body, html {
     flex-grow : 1;
 }
 
+
 #dataContainer {
+    overflow: hidden;
+    transition: all .1s;
+    background-color: transparent;
+    bottom: 0px;
     position: absolute; 
+    max-width: 600px;
+    transition: all .2s;
+}
+
+#content{
+    max-width: 600px;
+    position: relative; 
     bottom: 0px;    
+    border-top-right-radius: 45px;
     padding: 25px 25px;
     padding-top: 10px;
-    border-top-right-radius: 45px;
-    margin-right: 65px;
-    transition: all .5s linear;
-    min-width: 100px;
 }
 
 @media only screen and  (max-device-width : 767px){ 
-    #dataContainer {
-        position: absolute; 
+    #dataContainer {        
+        transition: all .1s;
+        background-color: transparent;
+        bottom: 0px;
+        position: absolute;
+        max-width: 260px;
+        max-height: 180px;        
+        overflow: auto;
+        transition: all .2s;
+        padding-right: 20px;
+        border-top-right-radius: 45px;
+    }
+
+    #content {
+        position: relative; 
         bottom: 0px;    
         padding: 25px 25px;
         padding-top: 10px;
         border-top-right-radius: 45px;
-        margin-right: 65px;
-        overflow-x: hidden; 
-        overflow-x: auto;
-        max-height: 180px;
-        transition: all .5s linear;
-    }   
+    }
+    
+    h3{
+        font-size: 16pt;
+    }
+    
+    h4{
+        font-size: 12pt;
+    }
+
+    p{
+        font-size: 10pt;
+        overflow: auto;
+    }
 }
 
 .btn-map:hover{

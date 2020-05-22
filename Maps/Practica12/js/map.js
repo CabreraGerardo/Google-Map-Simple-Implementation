@@ -52,8 +52,14 @@ function initMap(){
 }
 
 function setType(){
+
+    var $contentMask = document.getElementById('dataContainer');
+    var currentHeight = document.getElementById('content').offsetHeight;
+    var currentWidth = document.getElementById('content').offsetWidth;
+    $contentMask.setAttribute('style', `width: ${currentWidth}px !important; height: ${currentHeight}px !important;`);
+    
     document.getElementById('title').innerHTML = `${events[current].title}`;
-    document.getElementById('description').innerHTML = `${events[current].description}`;
+    document.getElementById('description').innerHTML = `${events[current].description}`; 
 
     resetMap();
 
@@ -132,6 +138,10 @@ function setType(){
             });
             break;    
     }
+
+    var currentHeight = document.getElementById('content').offsetHeight;
+    var currentWidth = document.getElementById('content').offsetWidth;
+    $contentMask.setAttribute('style', `width: ${currentWidth}px !important; height: ${currentHeight}px !important;`);
 }
 
 document.getElementById('btnPrev').addEventListener('click', ev => {
@@ -160,4 +170,12 @@ function resetMap() {
     }
 
     document.getElementById('divBtn').setAttribute('style', 'display: none !important');
+}
+
+function setAnimation(){
+    var $contentMask = document.getElementById('mask');
+    var currentHeight = document.getElementById('dataContainer').offsetHeight;
+    var currentWidth = document.getElementById('dataContainer').offsetWidth;
+    console.log(currentWidth)
+    $contentMask.setAttribute('style', `width: ${currentWidth} !important; height: ${currentHeight} !important;`);
 }
