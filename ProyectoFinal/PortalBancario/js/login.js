@@ -70,7 +70,7 @@ signupForm.addEventListener('submit', (e) => {
 document.getElementById('btnGoogle').addEventListener("click", (e) => {
     var provider = new firebase.auth.GoogleAuthProvider();
 
-    auth.signInWithPopup(provider).then(result => {
+    auth.signInWithPopup(provider).then(async result => {
         var token = result.credential.accessToken;
 
         var user = result.user;
@@ -90,7 +90,7 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
 document.getElementById('btnFacebook').addEventListener("click", (e) => {
     var provider = new firebase.auth.FacebookAuthProvider();
 
-    auth.signInWithPopup(provider).then(result => {
+    auth.signInWithPopup(provider).then(async result => {
         var token = result.credential.accessToken;
 
         var user = result.user;
