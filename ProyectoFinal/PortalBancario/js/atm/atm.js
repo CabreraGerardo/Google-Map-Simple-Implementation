@@ -45,7 +45,7 @@ function showAtms(){
                         google.maps.event.addListener(marker, 'mouseover', evt => {
                             info.open(atmMap);
                         });
-                        google.maps.event.addListener(marker, 'mouseleave', evt => {
+                        google.maps.event.addListener(marker, 'mouseout', evt => {
                             info.close(atmMap);
                         });
 
