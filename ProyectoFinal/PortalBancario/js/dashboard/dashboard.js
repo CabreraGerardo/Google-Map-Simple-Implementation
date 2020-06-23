@@ -1,8 +1,10 @@
 function loadCards(){
+    let saldoTotal = 0;
+
     cards.forEach(card => {
         let month = card.expiracion.getMonth() + 1;
         let year = card.expiracion.getFullYear();
-        document.getElementById('cards').innerHTML += `
+        cardsHTML.push(`
             <div id="${card.id}" class="credit-card">
                 <div class="card_front card_part">
                     <img class="card_square" src="https://image.ibb.co/cZeFjx/little_square.png">
@@ -17,11 +19,15 @@ function loadCards(){
                     </div>
                 </div>
             </div>
-        `;
+        `);
+
+        document.getElementById('cards').innerHTML += cardsHTML[cardsHTML.length - 1];
     
-        console.log(card.id);
+        saldoTotal += card.saldo;
+        console.log(card);
     });
 
+    document.getElementById('saldoTotal').innerHTML = `$${saldoTotal.toFixed(2)}`;
     setAnimations();
 }
 

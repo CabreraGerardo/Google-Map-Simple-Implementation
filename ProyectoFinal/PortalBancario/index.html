@@ -106,13 +106,13 @@
             </div>
             
             <div class="row">
-                <div id="saldoTotal" class="col-12 col-sm-4 col-xl-3">
+                <div class="col-12 col-sm-4 col-xl-3">
                     <div class="ibox">
                         <div class="ibox-title" style="background-color: #1FC0C8; color: white;">
                             <h5>Saldo Total</h5>
                         </div>
                         <div class="ibox-content">
-                            <h1 class="no-margins">$275,800</h1>
+                            <h1 id="saldoTotal" class="no-margins">$0</h1>
                         </div>
                     </div>
                 </div>
@@ -172,33 +172,35 @@
 
             <div id="data" class="container-fluid">
                 <div class="row">
-                    <div id="saldo" class="col-12 col-sm-4 col-xl-3">
+                    <div class="col-12 col-sm-4 col-xl-3">
                         <div class="ibox">
                             <div class="ibox-title" style="background-color: #1FC0C8; color: white;">
                                 <h5>Saldo en la cuenta</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins">$275,800</h1>
+                                <h1 id="saldo" class="no-margins">$275,800</h1>
                             </div>
                         </div>
                     </div>
-                    <div id="cargo" class="col-12 col-sm-4 col-xl-3">
-                        <div class="ibox ">
-                            <div class="ibox-title" style="background-color: #C81F48; color: white;">
-                                <h5>Ultimo Cargo</h5>
-                            </div>
-                            <div class="ibox-content">
-                                <h1 class="no-margins">$500</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="abono" class="col-12 col-sm-4 col-xl-3">
+                    <div class="col-12 col-sm-4 col-xl-3">
                         <div class="ibox ">
                             <div class="ibox-title" style="background-color: #1fc8a6; color: white;">
                                 <h5>Ultimo Abono</h5>
                             </div>
                             <div class="ibox-content">
-                                <h1 class="no-margins">$100</h1>
+                                <h1 id="abono" class="no-margins">$100</h1>
+                                <small id="fechaAbono"></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-xl-3">
+                        <div class="ibox ">
+                            <div class="ibox-title" style="background-color: #C81F48; color: white;">
+                                <h5>Ultimo Cargo</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 id="cargo" class="no-margins">$500</h1>
+                                <small id="fechaCargo"></small>
                             </div>
                         </div>
                     </div>
@@ -206,11 +208,11 @@
                 <div class="row mt-4 d-flex">
                     <div class="col-12 col-lg-6">
                         <div class="ibox ">
-                            <div class="ibox-title" style="background-color: #C81F48; color: white;">
-                                <h5>Ubicacion del Ultimo Cargo</h5>
+                            <div class="ibox-title" style="background-color: #1fc8a6; color: white;">
+                                <h5>Ubicacion del Ultimo Abono</h5>
                             </div>
                             <div class="ibox-content">
-                                <div id="mapCharge" class="map">
+                                <div id="mapDeposit" class="map">
 
                                 </div>
                             </div>
@@ -218,11 +220,11 @@
                     </div>
                     <div class="col-12 col-lg-6">
                         <div class="ibox ">
-                            <div class="ibox-title" style="background-color: #1fc8a6; color: white;">
-                                <h5>Ubicacion del Ultimo Abono</h5>
+                            <div class="ibox-title" style="background-color: #C81F48; color: white;">
+                                <h5>Ubicacion del Ultimo Cargo</h5>
                             </div>
                             <div class="ibox-content">
-                                <div id="mapDeposit" class="map">
+                                <div id="mapCharge" class="map">
 
                                 </div>
                             </div>
@@ -263,9 +265,9 @@
 
 <script src="js/firebaseConfig.js"></script>
 <script src="js/userData.js"></script>
-<script src="js/dashboard.js"></script>
-<script src="js/dashboardMap.js"></script>
-<script src="js/dashboardCardAnimation.js"></script>
+<script src="js/dashboard/dashboard.js"></script>
+<script src="js/dashboard/dashboardMap.js"></script>
+<script src="js/dashboard/dashboardCardAnimation.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYebr8sO8pXiFu4JLVrgN1-ojkG5cqQ1E&callback=initMap" async defer></script>  
 
 

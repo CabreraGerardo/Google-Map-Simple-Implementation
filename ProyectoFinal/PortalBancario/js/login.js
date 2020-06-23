@@ -1,3 +1,14 @@
+auth.onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+        window.location.href = 'index.html';
+    } else {
+      // No user is signed in.
+    }
+});
+
+
+
 const loginForm = document.getElementById('loginForm');
 
 loginForm.addEventListener('submit', (e) => {
@@ -40,11 +51,7 @@ signupForm.addEventListener('submit', (e) => {
             direccion: signupForm['address'].value
         });
 
-        await db.collection('usuariosBanco').doc(cred.user.uid).collection('Tarjetas').doc().set({
-            numero: Math.round(Math.random()*1E16),
-            expiracion: new Date(new Date().setFullYear(new Date().getFullYear() + 4)),
-            tipo: 'debito'
-        });
+        await createDebitCard(cred.user.uid);
     })
     .then(() => {
         $('#registrarModal').modal('hide');
@@ -68,7 +75,9 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
 
         var user = result.user;
 
-        $('#ingresarModal').modal('hide');
+        console.log(user);
+        await createDebitCard(user.id);
+
         loginForm.reset();
         loginForm.querySelector('.error').innerHTML = '';
     })
@@ -86,23 +95,8 @@ document.getElementById('btnFacebook').addEventListener("click", (e) => {
 
         var user = result.user;
         console.log(user);
-        const html= `
-            <div class="row">
-                <div class="col-12 text-center">
-                    <img class="img-fluid mb-3 rounded" style="max-width: 150px" src="${user.photoURL}">
-                </div>
-                <div class="col-12 text-center">
-                    <p><b> ${user.displayName} </b></p>
-                </div>
-                <div class="col-12 text-center">
-                    <p> ${user.email} </p>
-                </div>
-            </div>
-        `;
+        await createDebitCard(user.id);
 
-        datosCuenta.innerHTML = html;
-
-        $('#ingresarModal').modal('hide');
         loginForm.reset();
         loginForm.querySelector('.error').innerHTML = '';
     })
@@ -128,4 +122,13 @@ function mensajeError(code){
         default:
             return 'Error';
     }
+}
+
+async function createDebitCard(userId){
+    return await db.collection('usuariosBanco').doc(userId).collection('Tarjetas').doc().set({
+        numero: Math.round(Math.random()*1E16),
+        expiracion: new Date(new Date().setFullYear(new Date().getFullYear() + 4)),
+        tipo: 'debito',
+        saldo: 0
+    });
 }

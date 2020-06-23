@@ -1,3 +1,9 @@
+var mapCharge;
+var chargeMarker;
+
+var depositMarker;
+var mapDeposit;
+
 function initMap()
 {
     var coordenadas = {
@@ -5,7 +11,7 @@ function initMap()
         lng: -101.711359
     }
 
-    var mapCharge = new google.maps.Map(
+    mapCharge = new google.maps.Map(
         document.getElementById('mapCharge'),
         {
             center: coordenadas,
@@ -13,7 +19,7 @@ function initMap()
         }
     );  
 
-    var mapDeposit = new google.maps.Map(
+    mapDeposit = new google.maps.Map(
         document.getElementById('mapDeposit'),
         {
             center: coordenadas,
@@ -21,6 +27,6 @@ function initMap()
         }
     );  
 
-    var chargeMarker = new google.maps.Marker({position: coordenadas, map: mapCharge});
-    var depositMarker = new google.maps.Marker({position: coordenadas, map: mapDeposit});
+    chargeMarker = new google.maps.Marker({position: coordenadas, map: mapCharge});
+    depositMarker = new google.maps.Marker({position: coordenadas, map: mapDeposit});
 }

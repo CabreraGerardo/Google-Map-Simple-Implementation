@@ -1,4 +1,5 @@
 let cards = [];
+let cardsHTML = [];
 let name = document.getElementById('username');
 let pic = document.getElementById('profilePicture');
 
@@ -31,14 +32,28 @@ function setUserData(user, id){
 function getCards(id){
     db.collection('usuariosBanco').doc(id).collection('Tarjetas').get().then( querySnapshot => {
         querySnapshot.docs.forEach(doc => {    
-            cards.push({
-                id: doc.id,
-                numero: doc.data().numero,
-                tipo: doc.data().tipo,
-                expiracion: doc.data().expiracion.toDate()
-            });
-        });
+            let movimientos = [];
+            db.collection('usuariosBanco').doc(id).collection('Tarjetas').doc(doc.id).collection('Movimientos').orderBy("fecha", "desc").get().then( snapshot => {
+                snapshot.docs.forEach(movimiento => {
+                    movimientos.push({
+                        monto: movimiento.data().monto,
+                        fecha: movimiento.data().fecha.toDate(),
+                        ubicacion: movimiento.data().ubicacion
+                    });
+                });
+                
+                cards.push({
+                    id: doc.id,
+                    numero: doc.data().numero,
+                    tipo: doc.data().tipo,
+                    expiracion: doc.data().expiracion.toDate(),
+                    saldo: doc.data().saldo,
+                    movimientos: movimientos
+                });
 
-        loadCards();
+                loadCards();
+            })
+
+        });
     });
 }

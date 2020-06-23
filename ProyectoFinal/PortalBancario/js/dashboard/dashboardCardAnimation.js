@@ -34,6 +34,7 @@ function setAnimations() {
             }
             else
             {            
+                if(!loadData(card)) return;
                 document.getElementById(card.id).style = `
                     position: relative;
                     left: ${(window.innerWidth || document.body.clientWidth) / 2 - left}px;
@@ -58,10 +59,41 @@ function setAnimations() {
                     opacity: 1;
                     height: auto;
                 `;
+
             }
         
             centered = !centered;
         });
         index++;
     });
+}
+
+function loadData(card){
+    if(!card.movimientos) {
+        alert("No tiene moviemientos registrados en la tarjeta"); 
+        return false;
+    }
+
+    let lastCharge = 0;
+    let lastDeposit = 0;
+
+    card.movimientos.forEach(movimiento => {
+        console.log(movimiento.monto)
+        if(movimiento.monto > 0 && lastDeposit == 0) lastDeposit = movimiento;
+        if(movimiento.monto < 0 && lastCharge == 0) lastCharge = movimiento;
+    });
+
+    document.getElementById('saldo').innerHTML = `$${card.saldo}`;
+    document.getElementById('cargo').innerHTML = `$${lastCharge.monto * -1}`;
+    document.getElementById('abono').innerHTML = `$${lastDeposit.monto}`;
+
+    document.getElementById('fechaCargo').innerHTML = `${lastCharge.fecha}`;
+    document.getElementById('fechaAbono').innerHTML = `${lastDeposit.fecha}`;
+
+    chargeMarker.setPosition( new google.maps.LatLng( lastCharge.ubicacion.latitude, lastCharge.ubicacion.longitude ) );
+    mapCharge.panTo( new google.maps.LatLng( lastCharge.ubicacion.latitude, lastCharge.ubicacion.longitude ) );
+    depositMarker.setPosition( new google.maps.LatLng( lastDeposit.ubicacion.latitude, lastDeposit.ubicacion.longitude ) );
+    mapDeposit.panTo( new google.maps.LatLng( lastDeposit.ubicacion.latitude, lastDeposit.ubicacion.longitude ) );
+
+    return true;
 }
