@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Inicio</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/customStyle.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <div class="row">
+                                <div class="col-3 d-flex align-items-center">
+                                    <div id="profilePic">
+                                        <img id="profilePicture" class="img-fluid rounded-circle" src="https://www.waspcom.com/wp-content/uploads/2014/10/user-placeholder-circle-1-300x300.png">
+                                    </div>
+                                </div>
+                                <div class="col-9">   
+                                    <span id="username" class="block m-t-xs font-bold"></span>
+                                    <span class="text-muted text-xs block">Menu <b class="caret"></b></span>
+                                </div>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        <div id="profilePic">
+                            <img id="profilePicture" class="img-fluid rounded-circle" src="https://www.waspcom.com/wp-content/uploads/2014/10/user-placeholder-circle-1-300x300.png">
+                        </div>
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="index.html"><i class="fa fa-home"></i> <span class="nav-label">Inicio</span></a>
+                </li>
+                <li>
+                    <a href="movements.html"><i class="fa fa-clock-o"></i> <span class="nav-label">Movimientos</span> </a>
+                </li>
+                <li>
+                    <a href="atms.html"><i class="fa fa-credit-card"></i> <span class="nav-label">Cajeros</span> </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <h2 class="navbar-form-custom d-flex align-items-center mx-3 my-auto">Banco</h2>
+                    <!--<form role="search" class="navbar-form-custom" method="post" action="#">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                        </div>
+                    </form>-->
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sign-out"></i> Cerrar Sesión
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-12">
+                    <h1>Bienvenido al Portal en Línea</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="m-t-lg">
+                        <h1>
+                            Consulta
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div id="saldoTotal" class="col-12 col-sm-4 col-xl-3">
+                    <div class="ibox">
+                        <div class="ibox-title" style="background-color: #1FC0C8; color: white;">
+                            <h5>Saldo Total</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <h1 class="no-margins">$275,800</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="ml-2">
+                Seleccione una tarjeta para ver su información
+            </h3>
+
+            <div id="cards">
+                <!--<div id="1" class="credit-card">
+                    <div class="card_front card_part">
+                        <img class="card_square" src="https://image.ibb.co/cZeFjx/little_square.png">
+                        <img class="card_front-logo card_logo mt-1" src="https://www.pngkey.com/png/full/228-2286829_visa-logo-mastercard-and-visa-card.png">
+                        <p class="card_number">**** **** **** 6254</p>
+                        <div class="card_space-75">
+                            <p class="card_info">Débito</p>
+                        </div>
+                        <div class="card_space-25">
+                            <span class="card_label">Expira</span>
+                            <p class="card_info">10/25</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="2" class="credit-card">
+                    <div class="card_front card_part" style="background-image: url('https://image.ibb.co/bVnMrc/g3095.png'), linear-gradient(0deg, rgba(125,138,152,1) 30%, rgba(31,171,200,1) 100%);">
+                        <img class="card_square" src="https://image.ibb.co/cZeFjx/little_square.png">
+                        <img class="card_front-logo card_logo mt-1" src="https://www.pngkey.com/png/full/228-2286829_visa-logo-mastercard-and-visa-card.png">
+                        <p class="card_number">**** **** **** 6255</p>
+                        <div class="card_space-75">
+                            <p class="card_info">Crédito</p>
+                        </div>
+                        <div class="card_space-25">
+                            <span class="card_label">Expira</span>
+                            <p class="card_info">10/25</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="3" class="credit-card">
+                    <div class="card_front card_part" style="background-image: url('https://image.ibb.co/bVnMrc/g3095.png'), linear-gradient(0deg, rgba(125,138,152,1) 30%, rgba(204,116,244,1) 100%);">
+                        <img class="card_square" src="https://image.ibb.co/cZeFjx/little_square.png">
+                        <img class="card_front-logo card_logo mt-1" src="https://www.pngkey.com/png/full/228-2286829_visa-logo-mastercard-and-visa-card.png">
+                        <p class="card_number">**** **** **** 6256</p>
+                        <div class="card_space-75">
+                            <p class="card_info">Crédito VIP</p>
+                        </div>
+                        <div class="card_space-25">
+                            <span class="card_label">Expira</span>
+                            <p class="card_info">10/25</p>
+                        </div>
+                    </div>
+                </div>-->
+
+            </div>
+
+            <div id="data" class="container-fluid">
+                <div class="row">
+                    <div id="saldo" class="col-12 col-sm-4 col-xl-3">
+                        <div class="ibox">
+                            <div class="ibox-title" style="background-color: #1FC0C8; color: white;">
+                                <h5>Saldo en la cuenta</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">$275,800</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="cargo" class="col-12 col-sm-4 col-xl-3">
+                        <div class="ibox ">
+                            <div class="ibox-title" style="background-color: #C81F48; color: white;">
+                                <h5>Ultimo Cargo</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">$500</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="abono" class="col-12 col-sm-4 col-xl-3">
+                        <div class="ibox ">
+                            <div class="ibox-title" style="background-color: #1fc8a6; color: white;">
+                                <h5>Ultimo Abono</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">$100</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4 d-flex">
+                    <div class="col-12 col-lg-6">
+                        <div class="ibox ">
+                            <div class="ibox-title" style="background-color: #C81F48; color: white;">
+                                <h5>Ubicacion del Ultimo Cargo</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div id="mapCharge" class="map">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="ibox ">
+                            <div class="ibox-title" style="background-color: #1fc8a6; color: white;">
+                                <h5>Ubicacion del Ultimo Abono</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div id="mapDeposit" class="map">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="pull-right">
+                <!--10GB of <strong>250GB</strong> Free.-->
+            </div>
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2018
+            </div>
+        </div>
+
+    </div>
+</div>    
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+
+<script src="js/firebaseConfig.js"></script>
+<script src="js/userData.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/dashboardMap.js"></script>
+<script src="js/dashboardCardAnimation.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYebr8sO8pXiFu4JLVrgN1-ojkG5cqQ1E&callback=initMap" async defer></script>  
+
+
+</body>
+
+</html>

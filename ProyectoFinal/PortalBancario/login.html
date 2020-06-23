@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/loginStyle.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login centered pb-5">
+        <h1>Bienvenido</h1>
+        <h3>Inicie sesión para continuar</h3>
+        <form id="loginForm" class="mb-2">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>   
+            <p class="error text-danger"></p>
+        </form>
+        
+        <hr>
+        <div class="row text-center">
+            <div class="col-12 col-sm-6 text-sm-right mb-2">
+                <button class="btn btn-danger" id="btnGoogle">
+                    <p href="#" class="m-0 fa fa-google"></p> <br>Ingresar con google 
+                </button>
+            </div>
+            <div class="col-12 col-sm-6 text-sm-left mb-2">
+                <button class="btn" style="background-color: #3b5998; color: white;" id="btnFacebook">
+                    <p href="#" class="m-0 fa fa-facebook"></p> <br>Ingresar con facebook 
+                </button>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row">
+            <div class="text-center col">
+                <a class="mb-5" href="#" data-toggle="modal" data-target="#registrarModal">Registrarse</a>
+            </div>            
+        </div>
+        
+    </div>
+
+
+    <!-- Modal Registrar -->
+    <div class="modal fade" id="registrarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Registrar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="row m-2">
+                            <div class="col-12">
+                                <label for="name">Nombre</label>
+                                <input class="form-control" type="text" required id="name" placeholder="Ingresa tu(s) nombre(s)">
+                            </div>
+                        </div>
+                        <div class="row m-2">
+                            <div class="col-12">
+                                <label for="lastname">Apellido</label>
+                                <input class="form-control" type="text" required id="lastname" placeholder="Ingresa tus apellidos">
+                            </div>
+                        </div>
+                        <div class="row m-2">
+                            <div class="col-12">
+                                <label for="email">Email</label>
+                                <input class="form-control" type="email" required id="email" placeholder="Ingresa tu correo">
+                            </div>
+                        </div>
+                        <div class="row m-2">
+                            <div class="col-12">
+                                <label for="password">Contraseña</label>
+                                <input class="form-control" type="password" required id="password" placeholder="Ingresa tu contraseña">
+                            </div>
+                        </div>
+                        <div class="row m-2">
+                            <div class="col-12">
+                                <label for="phoneNumber">Teléfono</label>
+                                <input class="form-control" type="number" step='any' required id="phoneNumber" placeholder="Ingresa tu teléfono">
+                            </div>
+                        </div>
+                        <div class="row m-2">
+                            <div class="col-12">
+                                <label for="address">Dirección</label>
+                                <input class="form-control" type="text" required id="address" placeholder="Ingresa tu dirección">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary">Registrarse</button>
+                                <p class="error text-danger"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
+    <!-- Mainly scripts --> 
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>    
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+    <script src="js/firebaseConfig.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

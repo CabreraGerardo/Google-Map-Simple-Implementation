@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,400i,700,700i');
+
+.map{
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+body, html {
+    height: 100%;
+}
+
+#map{
+    height: 85vh;
+}
+
+#profilePic{
+    margin: auto;
+    border-radius: 100%;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+#data{
+    opacity: 0;
+    visibility: hidden;
+    height: 0px;
+    transition: visibility .5s, opacity .5s linear;
+}
+
+#cards{
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.credit-card{
+    margin-right: 8px;
+    display: inline-block;
+    width: 320px;
+    height: 190px;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    perspective:600px;
+    opacity: 1;
+    visibility: visible; 
+    transition: .5s left, visibility .5s, opacity .5s linear;
+    left: 0;
+    cursor: pointer;
+}
+
+    
+.card_part{
+    top: 0;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    display: inline-block;
+    width: 320px;
+    height: 190px;
+    background-image: url('https://image.ibb.co/bVnMrc/g3095.png'), linear-gradient(0deg, rgba(125,138,152,1) 20%, rgba(31,200,166,1) 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.card_front{
+    padding: 18px;
+}
+
+.card_logo {
+    height: 16px;
+}
+
+.card_front-logo{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+}
+.card_square {
+    border-radius: 5px;
+    height: 30px;
+}
+
+.card_number {
+    display: block;
+    width: 100%;
+    word-spacing: 4px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.card_space-75 {
+    width: 75%;
+    float: left;
+}
+
+.card_space-25 {
+    width: 25%;
+    float: left;
+}
+
+.card_label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 1px;
+}
+
+.card_info {
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
