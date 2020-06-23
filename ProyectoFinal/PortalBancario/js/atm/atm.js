@@ -37,7 +37,7 @@ function showAtms(){
                             position: place.geometry.location
                         });
 
-                        var info = google.maps.InfoWindow({
+                        var info = new google.maps.InfoWindow({
                             content: this.title + '<br>' + place.vicinity,
                             position: this.position
                         });
