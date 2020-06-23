@@ -32,7 +32,7 @@ function showAtms(){
 
                     results.forEach(place => {
                         var icono = {
-                            url: place.icon,
+                            url: 'https://pngimage.net/wp-content/uploads/2018/05/atm-png-icon-6.png',
                             scaledSize: new google.maps.Size(25,25),
                             origin: new google.maps.Point(0,0),
                             anchor: new google.maps.Point(0,0)
