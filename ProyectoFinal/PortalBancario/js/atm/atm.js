@@ -31,21 +31,29 @@ function showAtms(){
                     let bounds = new google.maps.LatLngBounds();
 
                     results.forEach(place => {
+                        var icono = {
+                            url: place.icon,
+                            scaledSize: new google.maps.Size(25,25),
+                            origin: new google.maps.Point(0,0),
+                            anchor: new google.maps.Point(0,0)
+                        }
                         let marker = new google.maps.Marker({
+                            icon: icono,
                             map: atmMap,
                             title: place.name,
                             position: place.geometry.location
                         });
 
-                        var info = new google.maps.InfoWindow({
-                            content: this.title + '<br>' + place.vicinity,
-                            position: this.position
-                        });
+                        var info;
+                        google.maps.event.addListener(marker, 'mouseover', function() {
+                            info = new google.maps.InfoWindow({
+                                content: this.title + '<br>' + place.vicinity,
+                                position: this.position
+                            });
 
-                        google.maps.event.addListener(marker, 'mouseover', evt => {
                             info.open(atmMap);
                         });
-                        google.maps.event.addListener(marker, 'mouseout', evt => {
+                        google.maps.event.addListener(marker, 'mouseout', function() {
                             info.close(atmMap);
                         });
 
