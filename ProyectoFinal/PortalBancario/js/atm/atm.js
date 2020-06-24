@@ -20,7 +20,7 @@ function showAtms(){
             var service = new google.maps.places.PlacesService(atmMap);
                 service.nearbySearch({
                     location: currentPos,
-                    radius: 1000,
+                    radius: 10000,
                     type: ['atm']
                 },
                 (results, status, pagination) => {
