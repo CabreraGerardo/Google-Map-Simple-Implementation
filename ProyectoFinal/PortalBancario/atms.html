@@ -30,11 +30,11 @@
                             <div class="row">
                                 <div class="col-3 d-flex align-items-center">
                                     <div id="profilePic">
-                                        <img class="img-fluid rounded-circle" src="https://www.waspcom.com/wp-content/uploads/2014/10/user-placeholder-circle-1-300x300.png">
+                                        <img id="profilePicture" class="img-fluid rounded-circle" src="https://www.waspcom.com/wp-content/uploads/2014/10/user-placeholder-circle-1-300x300.png">
                                     </div>
                                 </div>
                                 <div class="col-9">   
-                                    <span class="block m-t-xs font-bold">Example user</span>
+                                    <span id="username" class="block m-t-xs font-bold"></span>
                                     <span class="text-muted text-xs block">Menu <b class="caret"></b></span>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                     </div>
                     <div class="logo-element">
                         <div id="profilePic">
-                            <img class="img-fluid rounded-circle" src="https://www.waspcom.com/wp-content/uploads/2014/10/user-placeholder-circle-1-300x300.png">
+                            <img id="profilePicture" class="img-fluid rounded-circle" src="https://www.waspcom.com/wp-content/uploads/2014/10/user-placeholder-circle-1-300x300.png">
                         </div>
                     </div>
                 </li>
@@ -103,6 +103,11 @@
     </div>
 </div>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
 <!-- Mainly scripts -->
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/popper.min.js"></script>
@@ -114,6 +119,8 @@
 <script src="js/inspinia.js"></script>
 <script src="js/plugins/pace/pace.min.js"></script>
 
+<script src="js/firebaseConfig.js"></script>
+<script src="js/userData.js"></script>
 <script src="js/atm/atmsMap.js"></script>
 <script src="js/atm/atm.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADjOfdGIg-7JiqjoTstMN9el4g-nLhxxA&libraries=places&callback=initMap" async defer></script>  

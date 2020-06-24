@@ -30,11 +30,11 @@
                             <div class="row">
                                 <div class="col-3 d-flex align-items-center">
                                     <div id="profilePic">
-                                        <img class="img-fluid rounded-circle" src="https://www.waspcom.com/wp-content/uploads/2014/10/user-placeholder-circle-1-300x300.png">
+                                        <img id="profilePicture" class="img-fluid rounded-circle" src="https://www.waspcom.com/wp-content/uploads/2014/10/user-placeholder-circle-1-300x300.png">
                                     </div>
                                 </div>
                                 <div class="col-9">   
-                                    <span class="block m-t-xs font-bold">Example user</span>
+                                    <span id="username" class="block m-t-xs font-bold"></span>
                                     <span class="text-muted text-xs block">Menu <b class="caret"></b></span>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@
                     </div>
                     <div class="logo-element">
                         <div id="profilePic">
-                            <img class="img-fluid rounded-circle" src="https://www.waspcom.com/wp-content/uploads/2014/10/user-placeholder-circle-1-300x300.png">
+                            <img id="profilePicture" class="img-fluid rounded-circle" src="https://www.waspcom.com/wp-content/uploads/2014/10/user-placeholder-circle-1-300x300.png">
                         </div>
                     </div>
                 </li>
@@ -91,67 +91,19 @@
                     <div class="row">
                         <div class="col">
                             <div class="dropdown mb-3">
-                                <div id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: 0px">
-                                    <div id="1" class="credit-card">
-                                        <div class="card_front card_part">
-                                            <img class="card_square" src="https://image.ibb.co/cZeFjx/little_square.png">
-                                            <img class="card_front-logo card_logo mt-1" src="https://www.pngkey.com/png/full/228-2286829_visa-logo-mastercard-and-visa-card.png">
-                                            <p class="card_number">**** **** **** 6254</p>
-                                            <div class="card_space-75">
-                                                <p class="card_info">Débito</p>
-                                            </div>
-                                            <div class="card_space-25">
-                                                <span class="card_label">Expira</span>
-                                                <p class="card_info">10/25</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div id="cardDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: 0px">
+                                    
                                 </div>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="background-color: #ffffff55 !important; border-radius: 15px;">
-                                    <a class="dropdown-item px-2 pt-3" href="#">
-                                        <div id="2" class="credit-card" style="margin: 0;">
-                                            <div class="card_front card_part" style="background-image: url('https://image.ibb.co/bVnMrc/g3095.png'), linear-gradient(0deg, rgba(125,138,152,1) 30%, rgba(31,171,200,1) 100%);">
-                                                <img class="card_square" src="https://image.ibb.co/cZeFjx/little_square.png">
-                                                <img class="card_front-logo card_logo mt-1" src="https://www.pngkey.com/png/full/228-2286829_visa-logo-mastercard-and-visa-card.png">
-                                                <p class="card_number">**** **** **** 6255</p>
-                                                <div class="card_space-75">
-                                                    <p class="card_info">Crédito</p>
-                                                </div>
-                                                <div class="card_space-25">
-                                                    <span class="card_label">Expira</span>
-                                                    <p class="card_info">10/25</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item px-2 pt-3" href="#">
-                                        <div id="3" class="credit-card" style="margin: 0;">
-                                            <div class="card_front card_part" style="background-image: url('https://image.ibb.co/bVnMrc/g3095.png'), linear-gradient(0deg, rgba(125,138,152,1) 30%, rgba(204,116,244,1) 100%);">
-                                                <img class="card_square" src="https://image.ibb.co/cZeFjx/little_square.png">
-                                                <img class="card_front-logo card_logo mt-1" src="https://www.pngkey.com/png/full/228-2286829_visa-logo-mastercard-and-visa-card.png">
-                                                <p class="card_number">**** **** **** 6256</p>
-                                                <div class="card_space-75">
-                                                    <p class="card_info">Crédito VIP</p>
-                                                </div>
-                                                <div class="card_space-25">
-                                                    <span class="card_label">Expira</span>
-                                                    <p class="card_info">10/25</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
+                                <div id="cardOptions" class="dropdown-menu" aria-labelledby="cardDropdown" style="background-color: #ffffff55 !important; border-radius: 15px;">
+                                    
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <select multiple class="form-control" style="height: 65vh; border-radius: 15px;">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
+                            <select id="movimientos" multiple class="form-control" style="height: 65vh; border-radius: 15px;">
+                                
                             </select>
                         </div>
                     </div>
@@ -175,6 +127,11 @@
     </div>
 </div>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+
 <!-- Mainly scripts -->
 <script src="js/jquery-3.1.1.min.js"></script>
 <script src="js/popper.min.js"></script>
@@ -186,7 +143,10 @@
 <script src="js/inspinia.js"></script>
 <script src="js/plugins/pace/pace.min.js"></script>
 
-<script src="js/movementsMap.js"></script>
+<script src="js/firebaseConfig.js"></script>
+<script src="js/userData.js"></script>
+<script src="js/movements/movementsMap.js"></script>
+<script src="js/movements/movements.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYebr8sO8pXiFu4JLVrgN1-ojkG5cqQ1E&callback=initMap" async defer></script>  
 
 
