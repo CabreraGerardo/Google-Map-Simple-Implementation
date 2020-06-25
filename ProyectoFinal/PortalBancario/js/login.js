@@ -77,7 +77,7 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
 
         console.log(user);
 
-        await db.collection('usuariosBanco').doc(cred.user.uid).set({
+        await db.collection('usuariosBanco').doc(user.uid).set({
             nombre: user.displayName,
             apellido: '',
             correo: user.email,
@@ -105,7 +105,7 @@ document.getElementById('btnFacebook').addEventListener("click", (e) => {
 
         var user = result.user;
         console.log(user);
-        await db.collection('usuariosBanco').doc(cred.user.uid).set({
+        await db.collection('usuariosBanco').doc(user.uid).set({
             nombre: user.displayName,
             apellido: '',
             correo: user.email,
