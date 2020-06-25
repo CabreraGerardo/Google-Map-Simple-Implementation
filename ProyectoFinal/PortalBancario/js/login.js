@@ -76,10 +76,20 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
         var user = result.user;
 
         console.log(user);
+
+        await db.collection('usuariosBanco').doc(cred.user.uid).set({
+            nombre: user.displayName,
+            apellido: '',
+            correo: user.email,
+            telefono: '',
+            direccion: ''
+        });
+
         await createDebitCard(user.id);
 
         loginForm.reset();
         loginForm.querySelector('.error').innerHTML = '';
+        window.location.href = 'index.html';
     })
     .catch( error => {
         console.log(error);
@@ -95,10 +105,18 @@ document.getElementById('btnFacebook').addEventListener("click", (e) => {
 
         var user = result.user;
         console.log(user);
+        await db.collection('usuariosBanco').doc(cred.user.uid).set({
+            nombre: user.displayName,
+            apellido: '',
+            correo: user.email,
+            telefono: '',
+            direccion: ''
+        });
         await createDebitCard(user.id);
 
         loginForm.reset();
         loginForm.querySelector('.error').innerHTML = '';
+        window.location.href = 'index.html';
     })
     .catch( error => {
         console.log(error);
