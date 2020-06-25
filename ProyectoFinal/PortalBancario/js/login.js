@@ -85,7 +85,7 @@ document.getElementById('btnGoogle').addEventListener("click", (e) => {
             direccion: ''
         });
 
-        await createDebitCard(user.id);
+        await createDebitCard(user.uid);
 
         loginForm.reset();
         loginForm.querySelector('.error').innerHTML = '';
@@ -112,7 +112,7 @@ document.getElementById('btnFacebook').addEventListener("click", (e) => {
             telefono: '',
             direccion: ''
         });
-        await createDebitCard(user.id);
+        await createDebitCard(user.uid);
 
         loginForm.reset();
         loginForm.querySelector('.error').innerHTML = '';
