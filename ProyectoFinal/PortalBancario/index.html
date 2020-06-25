@@ -58,6 +58,9 @@
                 <li>
                     <a href="atms.html"><i class="fa fa-credit-card"></i> <span class="nav-label">Cajeros</span> </a>
                 </li>
+                <li>
+                    <a href="simular.html"><i class="fa fa-wrench"></i> <span class="nav-label">Simular Movimientos</span> </a>
+                </li>
             </ul>
 
         </div>
@@ -77,7 +80,7 @@
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
-                        <a href="#">
+                        <a href="login.html">
                             <i class="fa fa-sign-out"></i> Cerrar Sesión
                         </a>
                     </li>
@@ -182,7 +185,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-4 col-xl-3">
+                    <div id="lastDepositData" class="col-12 col-sm-4 col-xl-3">
                         <div class="ibox ">
                             <div class="ibox-title" style="background-color: #1fc8a6; color: white;">
                                 <h5>Ultimo Abono</h5>
@@ -193,7 +196,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-4 col-xl-3">
+                    <div id="lastChargeData" class="col-12 col-sm-4 col-xl-3">
                         <div class="ibox ">
                             <div class="ibox-title" style="background-color: #C81F48; color: white;">
                                 <h5>Ultimo Cargo</h5>
@@ -205,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-4 d-flex">
+                <div id="lastDepositMap" class="row mt-4 d-flex">
                     <div class="col-12 col-lg-6">
                         <div class="ibox ">
                             <div class="ibox-title" style="background-color: #1fc8a6; color: white;">
@@ -218,7 +221,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6">
+                    <div id="lastChargeMap" class="col-12 col-lg-6">
                         <div class="ibox ">
                             <div class="ibox-title" style="background-color: #C81F48; color: white;">
                                 <h5>Ubicacion del Ultimo Cargo</h5>
@@ -267,7 +270,7 @@
 <script src="js/dashboard/dashboard.js"></script>
 <script src="js/dashboard/dashboardMap.js"></script>
 <script src="js/dashboard/dashboardCardAnimation.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYebr8sO8pXiFu4JLVrgN1-ojkG5cqQ1E&callback=initMap" async defer></script>  
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADjOfdGIg-7JiqjoTstMN9el4g-nLhxxA&callback=initMap" async defer></script>  
 
 
 </body>

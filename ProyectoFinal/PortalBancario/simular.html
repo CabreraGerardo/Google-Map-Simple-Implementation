@@ -55,10 +55,10 @@
                 <li>
                     <a href="movements.html"><i class="fa fa-clock-o"></i> <span class="nav-label">Movimientos</span> </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="atms.html"><i class="fa fa-credit-card"></i> <span class="nav-label">Cajeros</span> </a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="simular.html"><i class="fa fa-wrench"></i> <span class="nav-label">Simular Movimientos</span> </a>
                 </li>
             </ul>
@@ -88,14 +88,65 @@
 
             </nav>
         </div>
-        <div class="wrapper wrapper-content animated fadeInRight">
-            <div class="row">
-                <div class="col">
-                    <div id="map" class="map">
 
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row wrapper">
+                <div class="col-12">
+                    <button id="btnCreditCard" class="btn btn-primary">Obtener tarjeta de Credito</button>
+                    <button id="btnCreditVipCard" class="btn btn-primary">Obtener tarjeta de Credito VIP</button>
+                </div>
+            </div>
+            <div id="debit" class="row m-3">
+                <div class="col-12">
+                    <h2>Debito</h2>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="debitQuantity">Monto</label>
+                        <input type="number" class="form-control" id="debitQuantity">
                     </div>
                 </div>
-            </div>            
+                <div class="col-12">
+                    <div id="debitMap" class="map" style="height: 25vh; width: 100%;"></div>
+                </div>
+                <div class="col-12">
+                    <button id="btnDebit" class="btn btn-primary btn-block mt-2">Crear Movimiento</button>
+                </div>
+            </div>
+            <div id="credit" class="row m-3">
+                <div class="col-12">
+                    <h2>Credito</h2>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="creditQuantity">Monto</label>
+                        <input type="number" class="form-control" id="creditQuantity">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div id="creditMap" class="map" style="height: 25vh; width: 100%;"></div>
+                </div>
+                <div class="col-12">
+                    <button id="btnCredit" class="btn btn-primary btn-block mt-2">Crear Movimiento</button>
+                </div>
+            </div>
+            <div id="creditVip" class="row m-3">
+                <div class="col-12">
+                    <h2>Credito VIP</h2>
+                </div>
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="creditVipQuantity">Monto</label>
+                        <input type="number" class="form-control" id="creditVipQuantity">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div id="creditVipMap" class="map" style="height: 25vh; width: 100%;"></div>
+                </div>
+                <div class="col-12">
+                    <button id="btnCreditVip" class="btn btn-primary btn-block mt-2">Crear Movimiento</button>
+                </div>
+            </div>
         </div>
         <div class="footer">
             <div>
@@ -124,10 +175,10 @@
 
 <script src="js/firebaseConfig.js"></script>
 <script src="js/userData.js"></script>
-<script src="js/atm/atmsMap.js"></script>
-<script src="js/atm/atm.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADjOfdGIg-7JiqjoTstMN9el4g-nLhxxA&libraries=places&callback=initMap" async defer></script>  
+<script src="js/simulation/simulationMap.js"></script>
+<script src="js/simulation/simulation.js"></script>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADjOfdGIg-7JiqjoTstMN9el4g-nLhxxA&callback=initMap" async defer></script>  
 
 </body>
 

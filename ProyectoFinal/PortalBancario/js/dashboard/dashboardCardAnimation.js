@@ -69,7 +69,8 @@ function setAnimations() {
 }
 
 function loadData(card){
-    if(!card.movimientos) {
+    console.log(!card.movimientos)
+    if(card.movimientos.length <= 0) {
         alert("No tiene moviemientos registrados en la tarjeta"); 
         return false;
     }
@@ -90,10 +91,33 @@ function loadData(card){
     document.getElementById('fechaCargo').innerHTML = `${lastCharge.fecha}`;
     document.getElementById('fechaAbono').innerHTML = `${lastDeposit.fecha}`;
 
-    chargeMarker.setPosition( new google.maps.LatLng( lastCharge.ubicacion.latitude, lastCharge.ubicacion.longitude ) );
-    mapCharge.panTo( new google.maps.LatLng( lastCharge.ubicacion.latitude, lastCharge.ubicacion.longitude ) );
-    depositMarker.setPosition( new google.maps.LatLng( lastDeposit.ubicacion.latitude, lastDeposit.ubicacion.longitude ) );
-    mapDeposit.panTo( new google.maps.LatLng( lastDeposit.ubicacion.latitude, lastDeposit.ubicacion.longitude ) );
+    if(lastCharge != false)
+    {
+        chargeMarker.setPosition( new google.maps.LatLng( lastCharge.ubicacion.latitude, lastCharge.ubicacion.longitude ) );
+        mapCharge.panTo( new google.maps.LatLng( lastCharge.ubicacion.latitude, lastCharge.ubicacion.longitude ) );
+
+        document.getElementById('lastChargeData').style.visibility = 'visible';
+        document.getElementById('lastChargeMap').style.visibility = 'visible';
+    }
+    else
+    {
+        document.getElementById('lastChargeData').style.visibility = 'hidden';
+        document.getElementById('lastChargeMap').style.visibility = 'hidden';
+    }
+
+    if(lastDeposit != false)
+    {
+        depositMarker.setPosition( new google.maps.LatLng( lastDeposit.ubicacion.latitude, lastDeposit.ubicacion.longitude ) );
+        mapDeposit.panTo( new google.maps.LatLng( lastDeposit.ubicacion.latitude, lastDeposit.ubicacion.longitude ) );
+
+        document.getElementById('lastDepositData').style.visibility = 'visible';
+        document.getElementById('lastDepositMap').style.visibility = 'visible';
+    }
+    else
+    {
+        document.getElementById('lastDepositData').style.visibility = 'hidden';
+        document.getElementById('lastDepositMap').style.visibility = 'hidden';
+    }
 
     return true;
 }
